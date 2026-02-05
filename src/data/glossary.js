@@ -1,0 +1,281 @@
+export const glossary = [
+  {
+    term: 'API',
+    definition: 'Application Programming Interface - a set of rules that allows different software applications to communicate with each other.',
+    category: 'Concepts'
+  },
+  {
+    term: 'API Key',
+    definition: 'A unique identifier used to authenticate requests to an API service.',
+    category: 'Security'
+  },
+  {
+    term: 'Array',
+    definition: 'A data structure that stores multiple values in a single variable, accessed by index.',
+    category: 'Data Types'
+  },
+  {
+    term: 'Authentication',
+    definition: 'The process of verifying identity before granting access to a system or resource.',
+    category: 'Security'
+  },
+  {
+    term: 'Boolean',
+    definition: 'A data type that can only have two values: true or false.',
+    category: 'Data Types'
+  },
+  {
+    term: 'Branch',
+    definition: 'An independent line of development in Git, allowing you to work on features without affecting the main code.',
+    category: 'Git'
+  },
+  {
+    term: 'CLI',
+    definition: 'Command Line Interface - a text-based interface for interacting with a computer through typed commands.',
+    category: 'Tools'
+  },
+  {
+    term: 'Commit',
+    definition: 'A saved snapshot of changes in Git, along with a message describing what changed.',
+    category: 'Git'
+  },
+  {
+    term: 'Compiler',
+    definition: 'A program that translates source code into machine code that a computer can execute.',
+    category: 'Concepts'
+  },
+  {
+    term: 'Component',
+    definition: 'A reusable, self-contained piece of UI in frameworks like React.',
+    category: 'Frontend'
+  },
+  {
+    term: 'Conditional',
+    definition: 'A programming construct (if/else) that executes different code based on whether a condition is true or false.',
+    category: 'Concepts'
+  },
+  {
+    term: 'CSS',
+    definition: 'Cascading Style Sheets - a language for describing the visual presentation of HTML elements.',
+    category: 'Frontend'
+  },
+  {
+    term: 'Dependency',
+    definition: 'External code (package/library) that your project relies on to function.',
+    category: 'Concepts'
+  },
+  {
+    term: 'Environment Variable',
+    definition: 'A value stored outside your code that can be accessed at runtime, often used for configuration and secrets.',
+    category: 'Concepts'
+  },
+  {
+    term: 'Event',
+    definition: 'An action or occurrence (like a click or keypress) that can be detected and handled by code.',
+    category: 'Frontend'
+  },
+  {
+    term: 'Function',
+    definition: 'A reusable block of code that performs a specific task, takes inputs (parameters), and may return an output.',
+    category: 'Concepts'
+  },
+  {
+    term: 'Git',
+    definition: 'A version control system that tracks changes to code and enables collaboration.',
+    category: 'Git'
+  },
+  {
+    term: 'GitHub',
+    definition: 'A web-based platform for hosting Git repositories and collaborating on code.',
+    category: 'Git'
+  },
+  {
+    term: 'Greenfield',
+    definition: 'A new project built from scratch without existing code constraints.',
+    category: 'Concepts'
+  },
+  {
+    term: 'Hook',
+    definition: 'In React, a function that lets you use state and other features in functional components.',
+    category: 'Frontend'
+  },
+  {
+    term: 'HTML',
+    definition: 'HyperText Markup Language - the standard language for creating web page structure.',
+    category: 'Frontend'
+  },
+  {
+    term: 'IDE',
+    definition: 'Integrated Development Environment - a software application providing comprehensive tools for coding.',
+    category: 'Tools'
+  },
+  {
+    term: 'Interpreter',
+    definition: 'A program that executes code line by line without pre-compiling it.',
+    category: 'Concepts'
+  },
+  {
+    term: 'JavaScript',
+    definition: 'A programming language used for web development, both frontend and backend.',
+    category: 'Languages'
+  },
+  {
+    term: 'JSON',
+    definition: 'JavaScript Object Notation - a lightweight data format used for storing and exchanging data.',
+    category: 'Data Types'
+  },
+  {
+    term: 'Library',
+    definition: 'A collection of pre-written code that provides specific functionality you can use in your project.',
+    category: 'Concepts'
+  },
+  {
+    term: 'Loop',
+    definition: 'A programming construct that repeats a block of code multiple times.',
+    category: 'Concepts'
+  },
+  {
+    term: 'Merge',
+    definition: 'Combining changes from one Git branch into another.',
+    category: 'Git'
+  },
+  {
+    term: 'Node.js',
+    definition: 'A JavaScript runtime that allows running JavaScript outside a web browser.',
+    category: 'Tools'
+  },
+  {
+    term: 'npm',
+    definition: 'Node Package Manager - a tool for installing and managing JavaScript packages.',
+    category: 'Tools'
+  },
+  {
+    term: 'Object',
+    definition: 'A data structure that stores related data as key-value pairs.',
+    category: 'Data Types'
+  },
+  {
+    term: 'Package',
+    definition: 'A bundle of code that can be installed and used in your project.',
+    category: 'Concepts'
+  },
+  {
+    term: 'Parameter',
+    definition: 'A variable in a function definition that receives a value when the function is called.',
+    category: 'Concepts'
+  },
+  {
+    term: 'Path',
+    definition: 'The location of a file or folder in a file system.',
+    category: 'Concepts'
+  },
+  {
+    term: 'Prompt',
+    definition: 'In AI context, the text input you give to an AI system to get a response.',
+    category: 'AI'
+  },
+  {
+    term: 'Pull Request',
+    definition: 'A GitHub feature for proposing changes and requesting they be merged into another branch.',
+    category: 'Git'
+  },
+  {
+    term: 'Push',
+    definition: 'Uploading local Git commits to a remote repository.',
+    category: 'Git'
+  },
+  {
+    term: 'React',
+    definition: 'A JavaScript library for building user interfaces using components.',
+    category: 'Frontend'
+  },
+  {
+    term: 'Refactoring',
+    definition: 'Restructuring existing code without changing its external behavior.',
+    category: 'Concepts'
+  },
+  {
+    term: 'Repository',
+    definition: 'A storage location for a project\'s files and their complete version history.',
+    category: 'Git'
+  },
+  {
+    term: 'REST API',
+    definition: 'A type of API that uses HTTP requests to access and manipulate data.',
+    category: 'Concepts'
+  },
+  {
+    term: 'Return Value',
+    definition: 'The output that a function produces when it finishes executing.',
+    category: 'Concepts'
+  },
+  {
+    term: 'Runtime',
+    definition: 'The period when a program is executing.',
+    category: 'Concepts'
+  },
+  {
+    term: 'Scope',
+    definition: 'The context that determines where variables and functions are accessible in code.',
+    category: 'Concepts'
+  },
+  {
+    term: 'State',
+    definition: 'Data that represents the current condition of an application and can change over time.',
+    category: 'Frontend'
+  },
+  {
+    term: 'String',
+    definition: 'A data type representing text, enclosed in quotes.',
+    category: 'Data Types'
+  },
+  {
+    term: 'Syntax',
+    definition: 'The rules that define how code must be written in a programming language.',
+    category: 'Concepts'
+  },
+  {
+    term: 'Tailwind CSS',
+    definition: 'A utility-first CSS framework for rapidly building custom designs.',
+    category: 'Frontend'
+  },
+  {
+    term: 'Terminal',
+    definition: 'A text-based interface for entering commands to control your computer.',
+    category: 'Tools'
+  },
+  {
+    term: 'Variable',
+    definition: 'A named container for storing data values.',
+    category: 'Concepts'
+  },
+  {
+    term: 'Version Control',
+    definition: 'A system for tracking and managing changes to code over time.',
+    category: 'Git'
+  },
+  {
+    term: 'Vibe Coding',
+    definition: 'An approach to development where you describe what you want in natural language and AI helps create it.',
+    category: 'AI'
+  },
+  {
+    term: 'Vite',
+    definition: 'A fast build tool and development server for modern web projects.',
+    category: 'Tools'
+  }
+];
+
+export const categories = [
+  'All',
+  'AI',
+  'Concepts',
+  'Data Types',
+  'Frontend',
+  'Git',
+  'Languages',
+  'Security',
+  'Tools'
+];
+
+export default glossary;
