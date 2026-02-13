@@ -202,6 +202,191 @@ export const courseContent = [
             text: 'The terminal might feel intimidating at first, but within a few days of practice, it becomes second nature. Start with basic navigation and file operations, then expand from there.'
           }
         ]
+      },
+      {
+        id: 'section-2-4',
+        title: 'How Terminal Commands Actually Build Your App',
+        estimatedTime: '12 min',
+        content: [
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'The Question You\'re Probably Asking',
+            text: '"I type words in Terminal... and somehow that becomes a website I can see in my browser. How??"'
+          },
+          {
+            type: 'paragraph',
+            text: 'The simple answer: Terminal is like a remote control for tools that live on your computer. When you type commands, you\'re telling those tools what to do.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'What Happens When You Type: npm run dev'
+          },
+          {
+            type: 'paragraph',
+            text: 'Let\'s break down exactly what happens, step by step:'
+          },
+          {
+            type: 'heading',
+            level: 4,
+            text: 'Step 1: Terminal Reads Your Command'
+          },
+          {
+            type: 'list',
+            items: [
+              'You type: npm run dev',
+              'Terminal understands: "Run the \'dev\' script using npm"',
+              'npm is a program installed on your computer (it came with Node.js)'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 4,
+            text: 'Step 2: npm Looks in package.json'
+          },
+          {
+            type: 'paragraph',
+            text: 'Every project has a package.json file. Inside it, there\'s a "scripts" section that tells npm what commands mean:'
+          },
+          {
+            type: 'code',
+            language: 'json',
+            title: 'Inside package.json',
+            code: '{\n  "scripts": {\n    "dev": "vite",\n    "build": "vite build",\n    "preview": "vite preview"\n  }\n}'
+          },
+          {
+            type: 'paragraph',
+            text: 'So "npm run dev" actually means "run the program called vite"'
+          },
+          {
+            type: 'heading',
+            level: 4,
+            text: 'Step 3: Vite Starts Up'
+          },
+          {
+            type: 'list',
+            items: [
+              'Vite is a "development server" - a program that serves your website locally',
+              'It reads all your code files (HTML, CSS, JavaScript, React components)',
+              'It bundles them together in a way browsers can understand',
+              'It starts a mini web server on your computer'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 4,
+            text: 'Step 4: A Local Server Is Running'
+          },
+          {
+            type: 'paragraph',
+            text: 'You see a message like: "Local: http://localhost:5173"'
+          },
+          {
+            type: 'list',
+            items: [
+              'localhost means "this computer" (not the internet)',
+              '5173 is a "port" - like a numbered door into your computer',
+              'Your website is now being served through that door'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 4,
+            text: 'Step 5: Browser Shows Your App'
+          },
+          {
+            type: 'list',
+            items: [
+              'Open your browser and go to http://localhost:5173',
+              'Browser asks: "Hey localhost, give me what\'s behind door 5173"',
+              'Vite responds: "Here\'s the website!" and sends all the files',
+              'Browser displays your app!'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'The Magic Part: Hot Reload',
+            text: 'While Vite is running, it watches your files. Edit your code, save, and Vite instantly updates the browser. No need to restart or refresh - it happens automatically!'
+          },
+          {
+            type: 'diagram',
+            variant: 'flow',
+            title: 'The Complete Flow',
+            steps: ['You type: npm run dev', 'npm reads package.json', 'Vite starts', 'Server runs on localhost:5173', 'Browser displays your app']
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'What About npm install?'
+          },
+          {
+            type: 'paragraph',
+            text: 'When you type npm install, here\'s what happens:'
+          },
+          {
+            type: 'list',
+            items: [
+              'npm reads package.json to see what packages your project needs',
+              'It downloads those packages from the internet (npmjs.com)',
+              'It puts them all in a folder called node_modules',
+              'Now your project has all its dependencies ready to use'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'warning',
+            title: 'node_modules is HUGE',
+            text: 'The node_modules folder often contains thousands of files. That\'s why we never upload it to GitHub (it\'s in .gitignore). When someone else downloads your project, they run npm install to recreate it.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Why Can\'t I Just Double-Click My Files?'
+          },
+          {
+            type: 'paragraph',
+            text: 'Good question! Here\'s why modern web apps need a development server:'
+          },
+          {
+            type: 'list',
+            items: [
+              'React/Vue/etc. code isn\'t plain HTML - it needs to be transformed first',
+              'Modern JavaScript features need to be converted for older browsers',
+              'CSS files might use preprocessors like Tailwind that need processing',
+              'The server handles all this transformation automatically'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'Think of It Like This',
+            text: 'Your source code is like raw ingredients. The development server is like a kitchen that cooks them into a finished meal (your website) that the browser can consume.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'The Key Insight'
+          },
+          {
+            type: 'paragraph',
+            text: 'Terminal commands don\'t create your app - they run TOOLS that do the work. You\'re not writing magic spells. You\'re pressing buttons on a very powerful remote control.'
+          },
+          {
+            type: 'list',
+            items: [
+              'npm = the remote control for JavaScript packages',
+              'git = the remote control for version history',
+              'claude = the remote control for AI assistance',
+              'vite/webpack = the remote control for bundling code'
+            ]
+          },
+          {
+            type: 'paragraph',
+            text: 'Once you understand this, Terminal becomes much less mysterious. You\'re just telling tools what to do!'
+          }
+        ]
       }
     ]
   },
