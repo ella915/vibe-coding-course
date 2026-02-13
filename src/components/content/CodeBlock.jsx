@@ -67,60 +67,63 @@ export function CodeBlock({ code, language = 'text', title }) {
   );
 }
 
-// Simple syntax highlighting (no external library)
+// Simple syntax highlighting using placeholder tokens to avoid conflicts
 function highlightSyntax(code, language) {
-  let highlighted = escapeHtml(code);
+  let text = escapeHtml(code);
+  const tokens = [];
 
-  // Common patterns for all languages
-  const patterns = {
-    comment: {
-      regex: /(\/\/.*$|#.*$|\/\*[\s\S]*?\*\/)/gm,
-      class: 'text-gray-500',
-    },
-    string: {
-      regex: /("(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'|`(?:[^`\\]|\\.)*`)/g,
-      class: 'text-green-400',
-    },
-    number: {
-      regex: /\b(\d+\.?\d*)\b/g,
-      class: 'text-orange-400',
-    },
-    keyword: {
-      regex: /\b(const|let|var|function|return|if|else|for|while|do|switch|case|break|continue|class|extends|import|export|from|default|async|await|try|catch|finally|throw|new|this|typeof|instanceof|true|false|null|undefined|void)\b/g,
-      class: 'text-purple-400',
-    },
-    function: {
-      regex: /\b([a-zA-Z_][a-zA-Z0-9_]*)\s*\(/g,
-      class: 'text-blue-400',
-    },
+  // Helper to replace match with a placeholder token
+  const tokenize = (regex, className, transform) => {
+    text = text.replace(regex, (...args) => {
+      const match = args[0];
+      // Don't tokenize if it contains a placeholder
+      if (match.includes('\x00')) return match;
+      const index = tokens.length;
+      // Allow custom transform function for complex patterns
+      const result = transform ? transform(args, index, tokens) : match;
+      if (result === null) return match; // Skip if transform returns null
+      tokens.push({ match: result, className });
+      return `\x00${index}\x00`;
+    });
   };
+
+  // Apply patterns in order (first match wins due to tokenization)
+
+  // Comments first (highest priority)
+  tokenize(/(\/\/.*$|#.*$|\/\*[\s\S]*?\*\/)/gm, 'text-gray-500');
+
+  // Strings
+  tokenize(/("(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'|`(?:[^`\\]|\\.)*`)/g, 'text-green-400');
 
   // Bash-specific patterns
   if (language === 'bash' || language === 'shell') {
-    patterns.command = {
-      regex: /\b(cd|ls|mkdir|rm|cp|mv|touch|cat|echo|pwd|git|npm|node|python|pip|curl|wget|chmod|sudo|export)\b/g,
-      class: 'text-yellow-400',
-    };
-    patterns.flag = {
-      regex: /\s(-{1,2}[a-zA-Z][a-zA-Z0-9-]*)/g,
-      class: 'text-cyan-400',
-    };
+    // Commands
+    tokenize(/\b(cd|ls|mkdir|rm|cp|mv|touch|cat|echo|pwd|git|npm|npx|node|python|pip|curl|wget|chmod|sudo|export|source|which|man|clear|history|grep|find|head|tail|less|more|nano|vim|code|claude)\b/g, 'text-yellow-400');
+    // Flags - match with preceding space, but only highlight the flag
+    text = text.replace(/(\s)(-{1,2}[a-zA-Z][a-zA-Z0-9-]*)/g, (match, space, flag) => {
+      if (match.includes('\x00')) return match;
+      const index = tokens.length;
+      tokens.push({ match: flag, className: 'text-cyan-400' });
+      return `${space}\x00${index}\x00`;
+    });
   }
 
-  // Apply highlighting in specific order to avoid conflicts
-  const order = ['comment', 'string', 'command', 'flag', 'keyword', 'function', 'number'];
+  // Keywords (for JS/other languages)
+  tokenize(/\b(const|let|var|function|return|if|else|for|while|do|switch|case|break|continue|class|extends|import|export|from|default|async|await|try|catch|finally|throw|new|this|typeof|instanceof|true|false|null|undefined|void)\b/g, 'text-purple-400');
 
-  order.forEach((type) => {
-    if (patterns[type]) {
-      highlighted = highlighted.replace(patterns[type].regex, (match) => {
-        // Don't highlight if already inside a span
-        if (match.includes('<span')) return match;
-        return `<span class="${patterns[type].class}">${match}</span>`;
-      });
-    }
+  // Function calls
+  tokenize(/\b([a-zA-Z_][a-zA-Z0-9_]*)\s*\(/g, 'text-blue-400');
+
+  // Numbers
+  tokenize(/\b(\d+\.?\d*)\b/g, 'text-orange-400');
+
+  // Replace tokens with highlighted spans
+  text = text.replace(/\x00(\d+)\x00/g, (_, index) => {
+    const token = tokens[parseInt(index)];
+    return `<span class="${token.className}">${token.match}</span>`;
   });
 
-  return highlighted;
+  return text;
 }
 
 function escapeHtml(text) {
