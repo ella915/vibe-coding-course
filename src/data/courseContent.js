@@ -1785,6 +1785,241 @@ export const courseContent = [
         ]
       }
     ]
+  },
+  {
+    id: 'appendix',
+    title: 'APPENDIX',
+    description: 'Quick reference guides and cheat sheets for common commands and workflows.',
+    sections: [
+      {
+        id: 'section-appendix-1',
+        title: 'Essential Terminal Commands',
+        estimatedTime: '10 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'A quick reference guide to the most common terminal commands you\'ll use. Bookmark this page for easy access!'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Navigation Commands'
+          },
+          {
+            type: 'list',
+            items: [
+              'pwd - Shows your current location (which folder you\'re in)',
+              'ls - Lists all files and folders in your current location',
+              'cd folder-name - Moves you into a folder called "folder-name"',
+              'cd .. - Goes back up one level (to the parent folder)',
+              'cd ~ - Takes you to your home directory',
+              'cd - - Toggles between your last two locations'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'File Operations'
+          },
+          {
+            type: 'list',
+            items: [
+              'mkdir new-folder - Creates a new folder',
+              'touch newfile.txt - Creates a new empty file',
+              'cp file.txt backup.txt - Copies a file (makes a duplicate)',
+              'mv file.txt newname.txt - Renames or moves a file',
+              'rm file.txt - Deletes a file (be careful - no recycle bin!)',
+              'rm -r folder-name - Deletes a folder and everything in it (use with caution!)'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Running Your Projects'
+          },
+          {
+            type: 'list',
+            items: [
+              'npm install - Installs all the packages your project needs (run once when you first download a project)',
+              'npm run dev - Starts your development server so you can see your app in the browser',
+              'npm run build - Builds your app for production (makes it ready to deploy)',
+              'Ctrl+C - Stops the currently running process (like your dev server)'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Stopping and Closing'
+          },
+          {
+            type: 'list',
+            items: [
+              'Ctrl+C - Stops whatever is currently running (like npm run dev). Always do this before closing Terminal.',
+              'exit - Closes the current Terminal window/tab (only works if nothing is running - use Ctrl+C first)',
+              'Cmd+Q (Mac) or Alt+F4 (Windows) - Closes Terminal application completely'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'What happens if you just close Terminal or shut your computer?',
+            text: 'If you have a dev server running and just close Terminal or shut down, the process stops automatically. Your files are safe - nothing gets deleted. Next time, just open Terminal, navigate to your project folder, and run npm run dev again. Best practice: Press Ctrl+C first, but if you forget, it\'s not a disaster!'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Git Commands'
+          },
+          {
+            type: 'list',
+            items: [
+              'git status - Shows what files have changed',
+              'git add . - Stages all your changes (gets them ready to save)',
+              'git commit -m "message" - Saves your changes with a description',
+              'git push - Uploads your changes to GitHub',
+              'git pull - Downloads the latest changes from GitHub',
+              'git checkout -b branch-name - Creates a new branch and switches to it'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Quick Tips'
+          },
+          {
+            type: 'list',
+            items: [
+              'Tab key - Autocompletes folder/file names (type first few letters, press Tab)',
+              'Up arrow - Shows your previous command (press repeatedly to go back through history)',
+              'clear or Ctrl+L - Clears the terminal screen (makes it less cluttered)',
+              'history - Shows all your recent commands'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'section-appendix-2',
+        title: 'Typical Workflows',
+        estimatedTime: '8 min',
+        content: [
+          {
+            type: 'heading',
+            level: 3,
+            text: 'When You\'re Done Working'
+          },
+          {
+            type: 'numbered-list',
+            items: [
+              'Stop the dev server: Press Ctrl+C',
+              'Save your work to Git (if you made changes): git add . then git commit -m "Describe what you changed" then git push',
+              'Close Terminal: Cmd+Q (Mac) or just close the window',
+              'Shut down your computer - Everything is saved and safe!'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Starting Work Again Later'
+          },
+          {
+            type: 'numbered-list',
+            items: [
+              'Open Terminal',
+              'Navigate to your project: cd ~/Documents/Projects/your-project-name',
+              'Start the dev server: npm run dev',
+              'Open browser: Go to localhost:5173 (or whatever port it shows)',
+              'Continue working!'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Starting a New Feature'
+          },
+          {
+            type: 'numbered-list',
+            items: [
+              'Make sure you\'re on the main branch: git checkout main',
+              'Get the latest code: git pull',
+              'Create a new branch: git checkout -b feature-name',
+              'Build your feature with Claude Code',
+              'Test it works',
+              'Commit your changes: git add . then git commit -m "Add feature-name"',
+              'Push to GitHub: git push -u origin feature-name',
+              'Create a pull request on GitHub'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'The Daily Rhythm',
+            text: 'Open Terminal → Navigate to project → git pull → npm run dev → Work on features → Test → Commit → Push → Stop server → Close Terminal. This rhythm keeps your code safe and your workflow smooth.'
+          }
+        ]
+      },
+      {
+        id: 'section-appendix-3',
+        title: 'Common Error Solutions',
+        estimatedTime: '10 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Quick fixes for the most common errors you\'ll encounter.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: '"command not found"'
+          },
+          {
+            type: 'paragraph',
+            text: 'This means the program isn\'t installed or Terminal can\'t find it. Try: 1) Check spelling, 2) Install the program (e.g., npm install -g package-name), 3) Restart Terminal.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: '"permission denied"'
+          },
+          {
+            type: 'paragraph',
+            text: 'You don\'t have access to that file or folder. Try: 1) Check if the file exists, 2) Run with sudo (only if you know what you\'re doing), 3) Check file permissions with ls -la.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: '"port already in use"'
+          },
+          {
+            type: 'paragraph',
+            text: 'Another process is using that port. Try: 1) Stop other dev servers (Ctrl+C), 2) Close other Terminal windows running servers, 3) Use a different port (most tools let you specify with --port).'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: '"node_modules not found" or "Cannot find module"'
+          },
+          {
+            type: 'paragraph',
+            text: 'Dependencies aren\'t installed. Run: npm install in your project folder. This downloads all required packages.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: '"git: not a repository"'
+          },
+          {
+            type: 'paragraph',
+            text: 'You\'re not in a Git repository folder. Navigate to your project folder with cd, or initialize Git with git init.'
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'When in Doubt',
+            text: 'Copy the exact error message and paste it to Claude or Google. Error messages are usually very specific about what went wrong!'
+          }
+        ]
+      }
+    ]
   }
 ];
 
