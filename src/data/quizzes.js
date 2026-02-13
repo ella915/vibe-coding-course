@@ -1,5 +1,115 @@
 export const quizzes = [
   {
+    moduleId: 'module-0',
+    passingScore: 70,
+    questions: [
+      {
+        id: 'q0-1',
+        type: 'multiple-choice',
+        question: 'What is vibe coding?',
+        options: [
+          'A new programming language',
+          'Building software by describing what you want in plain English, with AI writing the code',
+          'Writing code while listening to music',
+          'A meditation technique for programmers'
+        ],
+        correctAnswer: 1,
+        explanation: 'Vibe coding is the practice of describing desired functionality in natural language and having AI assistants generate the actual code.'
+      },
+      {
+        id: 'q0-2',
+        type: 'multiple-choice',
+        question: 'What\'s the difference between an LLM and traditional software?',
+        options: [
+          'They\'re the same thing',
+          'LLMs understand and generate human language, traditional software follows explicit instructions',
+          'LLMs are always slower',
+          'Traditional software is always better'
+        ],
+        correctAnswer: 1,
+        explanation: 'Large Language Models (LLMs) like Claude can understand context and nuance in natural language, while traditional software requires precise, predefined instructions.'
+      },
+      {
+        id: 'q0-3',
+        type: 'multiple-choice',
+        question: 'What level of automation uses AI to make intelligent decisions at key points in a workflow?',
+        options: [
+          'Simple automation',
+          'Conditional automation',
+          'Agentic automation',
+          'Manual processing'
+        ],
+        correctAnswer: 2,
+        explanation: 'Agentic automation combines predefined workflows with AI decision-making at critical points, balancing structure with intelligence.'
+      },
+      {
+        id: 'q0-4',
+        type: 'multiple-choice',
+        question: 'What do you still need to understand even when using vibe coding?',
+        options: [
+          'Exact programming syntax',
+          'What you\'re trying to build, how it should work, and whether it\'s working correctly',
+          'Low-level computer architecture',
+          'Nothing, AI does everything'
+        ],
+        correctAnswer: 1,
+        explanation: 'You\'re the architect - you need to know what to build, how it should function, and how to verify it works. AI handles the syntax and implementation details.'
+      },
+      {
+        id: 'q0-5',
+        type: 'multiple-choice',
+        question: 'When should you use autonomous AI agents instead of simpler automation?',
+        options: [
+          'Always, they\'re better',
+          'Never, they\'re too complex',
+          'When the goal is clear but the path to achieve it varies and requires adaptation',
+          'Only for entertainment purposes'
+        ],
+        correctAnswer: 2,
+        explanation: 'Autonomous agents excel when you need adaptive, goal-oriented behavior rather than following a fixed process.'
+      },
+      {
+        id: 'q0-6',
+        type: 'multiple-choice',
+        question: 'What is NOT a requirement to start this course?',
+        options: [
+          'A computer and internet connection',
+          'Prior coding experience',
+          'Curiosity and willingness to experiment',
+          'A free Claude.ai account'
+        ],
+        correctAnswer: 1,
+        explanation: 'This course is designed for beginners with no coding experience. Curiosity and willingness to learn are all you need.'
+      },
+      {
+        id: 'q0-7',
+        type: 'multiple-choice',
+        question: 'What\'s the recommended approach when you get stuck?',
+        options: [
+          'Give up immediately',
+          'Re-read the section, check the glossary, search for error messages, break down the problem',
+          'Wait for someone to help you',
+          'Skip to the next module'
+        ],
+        correctAnswer: 1,
+        explanation: 'Debugging and problem-solving are skills you develop by working through issues systematically.'
+      },
+      {
+        id: 'q0-8',
+        type: 'multiple-choice',
+        question: 'Which combination creates the most value?',
+        options: [
+          'Using AI only for chat',
+          'Using automation only for simple tasks',
+          'Combining AI + Automation + Vibe Coding for intelligent, custom tools',
+          'Avoiding all new technology'
+        ],
+        correctAnswer: 2,
+        explanation: 'The superpowers emerge when you combine AI\'s intelligence with automation\'s efficiency and vibe coding\'s accessibility.'
+      }
+    ]
+  },
+  {
     moduleId: 'module-1',
     passingScore: 70,
     questions: [

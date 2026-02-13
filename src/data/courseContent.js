@@ -1,5 +1,583 @@
 export const courseContent = [
   {
+    id: 'module-0',
+    title: 'INTRODUCTION TO AI, AUTOMATION & VIBE CODING',
+    description: 'Understanding what AI, automation, and vibe coding are, how they connect, and what you\'ll be able to build.',
+    sections: [
+      {
+        id: 'section-0-1',
+        title: 'What This Course Is About',
+        estimatedTime: '10 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Welcome! You\'re about to learn three interconnected skills that are transforming how people build software and automate their work.'
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'The Three Skills',
+            text: 'AI (Artificial Intelligence) - Using smart computer programmes to understand, generate, and make decisions. Automation - Setting up systems that work without you, handling repetitive tasks automatically. Vibe Coding - Building applications by describing what you want in plain English, rather than writing traditional code.'
+          },
+          {
+            type: 'paragraph',
+            text: 'Here\'s the truth: You don\'t need a computer science degree. You don\'t need to memorise programming syntax. You just need to understand what\'s possible, how to communicate what you want, and how to connect the right tools together.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'What You\'ll Be Able to Do After This Course'
+          },
+          {
+            type: 'list',
+            items: [
+              'Build complete web applications using AI assistants',
+              'Automate business processes that currently waste hours of manual work',
+              'Connect different services together (email, databases, Slack, etc.) without coding',
+              'Use AI to make decisions in your workflows (categorising, analysing, generating content)',
+              'Deploy your creations to the internet for others to use',
+              'Understand enough to hire developers or explain what you need built'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'What This Course Is NOT'
+          },
+          {
+            type: 'list',
+            items: [
+              'Not a traditional programming course (we\'re not memorising syntax)',
+              'Not just theory (you\'ll build real things)',
+              'Not about replacing developers (it\'s about empowering you to build and prototype)'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'The Philosophy',
+            text: 'Technology should serve you. You shouldn\'t have to become a computer scientist to make technology do what you want. This course teaches you to be the architect - AI and automation tools are your builders.'
+          }
+        ]
+      },
+      {
+        id: 'section-0-2',
+        title: 'Understanding AI - The Different Types',
+        estimatedTime: '15 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'AI (Artificial Intelligence) is software that can perform tasks that typically require human intelligence - understanding language, recognising patterns, making decisions, generating content. But "AI" is a broad term. Let\'s break down what people actually mean.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'AI Terminology You\'ll Hear'
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'Machine Learning (ML)',
+            text: 'Teaching computers to learn from examples rather than explicit programming. Show a computer 10,000 photos of cats and dogs, it learns to tell them apart. You use tools built with ML, you don\'t build ML yourself.'
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'Natural Language Processing (NLP)',
+            text: 'Teaching computers to understand and generate human language. This is what makes "vibe coding" possible - you describe what you want in plain English.'
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'Large Language Models (LLMs)',
+            text: 'AI systems trained on massive amounts of text that can understand and generate human-like text. Examples: Claude, ChatGPT, Gemini. These are your AI assistants - you give instructions, they execute.'
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'Generative AI',
+            text: 'AI that creates new content (text, images, code, music). Most AI categorises or predicts; generative AI creates something new. This is what powers vibe coding.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'AI Tools vs AI Agents'
+          },
+          {
+            type: 'comparison',
+            title: 'Understanding the Difference',
+            headers: ['AI Tool', 'AI Agent'],
+            rows: [
+              ['You ask, it responds', 'You give a goal, it figures out how'],
+              ['Every interaction needs your input', 'Makes multiple decisions autonomously'],
+              ['Example: ChatGPT for a question', 'Example: AI that monitors and adjusts pricing'],
+              ['You control every step', 'You set goals and boundaries']
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'The AI Tools You\'ll Use'
+          },
+          {
+            type: 'list',
+            items: [
+              'Claude (Anthropic) - Your primary AI assistant for coding and reasoning',
+              'Claude Code - AI that writes code directly to files on your computer',
+              'Cursor - Code editor with AI built in for ongoing development',
+              'n8n - Visual workflow builder with AI integration',
+              'Vercel - Hosts your applications on the internet'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'Start Simple',
+            text: 'You don\'t need all of these at once. Start with Claude and n8n - they cover 80% of use cases.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Common AI Misconceptions'
+          },
+          {
+            type: 'list',
+            items: [
+              '"AI is all-knowing" - Reality: AI makes mistakes and hallucinates facts. Your job is to verify outputs.',
+              '"AI will replace human creativity" - Reality: AI is a tool that amplifies human capability. You provide direction.',
+              '"You need to understand how AI works internally" - Reality: You just need to know what it can do and how to communicate with it.',
+              '"AI can read your mind" - Reality: Clear instructions get better results. Garbage in, garbage out.'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'section-0-3',
+        title: 'Understanding Automation - From Simple to Intelligent',
+        estimatedTime: '12 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Automation is setting up systems that perform tasks automatically, without human intervention for each instance. There\'s a spectrum from simple to intelligent.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Level 1: Simple Automation (No Intelligence)'
+          },
+          {
+            type: 'paragraph',
+            text: 'IF this happens, THEN do that - fixed rules, no variation.'
+          },
+          {
+            type: 'list',
+            items: [
+              'When email arrives from boss, forward to team',
+              'Every Monday at 9am, send a reminder email',
+              'When form submitted, add row to spreadsheet'
+            ]
+          },
+          {
+            type: 'paragraph',
+            text: 'Strengths: Reliable, predictable, cheap. Limitations: Can\'t handle exceptions.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Level 2: Conditional Automation (Basic Logic)'
+          },
+          {
+            type: 'paragraph',
+            text: 'IF this THEN that, with multiple conditions and branches.'
+          },
+          {
+            type: 'list',
+            items: [
+              'If email contains "urgent" → priority queue, else → normal queue',
+              'If amount > $1000 → require approval, else → auto-approve',
+              'If weekend → don\'t send, else → send at 9am'
+            ]
+          },
+          {
+            type: 'paragraph',
+            text: 'Strengths: Handles different scenarios. Limitations: You must predefine every scenario.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Level 3: Agentic Automation (AI-Enhanced)'
+          },
+          {
+            type: 'paragraph',
+            text: 'Automation that uses AI to make intelligent decisions at key points.'
+          },
+          {
+            type: 'list',
+            items: [
+              'Email arrives → AI reads and categorises by intent → Routes based on understanding',
+              'Support ticket → AI assesses urgency from context → Assigns to appropriate team',
+              'Content uploaded → AI checks quality → Approves or flags for review'
+            ]
+          },
+          {
+            type: 'paragraph',
+            text: 'Strengths: Handles nuance, adapts to variations. Limitations: More expensive (AI API calls cost money).'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Level 4: Autonomous Agents (Full Intelligence)'
+          },
+          {
+            type: 'paragraph',
+            text: 'Give a goal, agent determines strategy and executes.'
+          },
+          {
+            type: 'list',
+            items: [
+              'Goal: "Increase social media engagement" → Agent researches, creates content, monitors, adjusts',
+              'Goal: "Keep competitor pricing updated" → Agent finds sites, extracts prices, alerts on changes',
+              'Goal: "Qualify incoming leads" → Agent researches, scores, drafts outreach'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'The Automation Decision Framework',
+            text: 'Is the process always exactly the same? → Simple automation. Can you define all variations? → Conditional. Does it require understanding context? → Agentic. Is the goal clear but path variable? → Autonomous agents.'
+          }
+        ]
+      },
+      {
+        id: 'section-0-4',
+        title: 'What is Vibe Coding?',
+        estimatedTime: '12 min',
+        content: [
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'Vibe Coding Definition',
+            text: 'Vibe coding is building software by describing what you want in natural language (plain English) rather than writing code syntax yourself. AI assistants translate your descriptions into working code.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Traditional Way vs Vibe Coding'
+          },
+          {
+            type: 'comparison',
+            title: 'The Difference',
+            headers: ['Traditional Coding', 'Vibe Coding'],
+            rows: [
+              ['Learn JavaScript, React, CSS, database queries', 'Describe what you want in plain English'],
+              ['Write hundreds of lines of precise code', 'AI writes all the code'],
+              ['Debug syntax errors, logic errors, quirks', 'Review: Does it do what you wanted?'],
+              ['Weeks to months to build simple app', 'Hours to build simple app']
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'What You Still Need to Know'
+          },
+          {
+            type: 'list',
+            items: [
+              'You MUST understand: What you\'re trying to build (the goal)',
+              'You MUST understand: How it should work from user\'s perspective (the flow)',
+              'You MUST understand: Whether it\'s working correctly (testing)',
+              'You MUST understand: Basic concepts (what\'s a database, API, component)',
+              'You DON\'T need: Exact syntax, memorised functions, framework conventions'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'example',
+            title: 'The Analogy',
+            text: 'Traditional coding = Being both architect AND construction worker. Vibe coding = Being the architect with skilled AI builders. You design the building, AI constructs it, you verify it meets your vision.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'The Vibe Coding Workflow'
+          },
+          {
+            type: 'numbered-list',
+            items: [
+              'Describe what you want: "I need a form that collects name, email, message, validates email, saves to database, styled with Tailwind"',
+              'AI generates the code: Creates files, components, database connection, styling',
+              'You test it: Does form appear? Does validation work? Does data save?',
+              'You iterate: "Make submit button bigger on mobile, add success message"',
+              'AI updates: Modifies code, you test again, repeat until perfect'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'What Makes Good Instructions'
+          },
+          {
+            type: 'list',
+            items: [
+              'Bad: "Make a website" (too vague)',
+              'Better: "Make a portfolio website" (AI knows type)',
+              'Even better: "Portfolio with About, Projects, Contact sections" (clear structure)',
+              'Best: Specific layout, styling preferences, functionality details (AI can execute confidently)'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'When Vibe Coding Shines'
+          },
+          {
+            type: 'list',
+            items: [
+              'Perfect for: Internal business tools, prototypes, automation workflows, personal projects',
+              'Not ideal for: Complex large-scale apps, systems needing deep optimization, highly specialized algorithms',
+              'The 80/20 rule: Vibe coding handles 80% of software needs'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'section-0-5',
+        title: 'How These Three Connect - Your New Superpowers',
+        estimatedTime: '10 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'The magic happens when you combine AI + Automation + Vibe Coding together.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Superpower 1: Build Custom Tools Instantly'
+          },
+          {
+            type: 'comparison',
+            title: 'Old Way vs New Way',
+            headers: ['Old Way', 'New Way'],
+            rows: [
+              ['Hire developer (weeks, $$$)', 'Describe to Claude Code (minutes)'],
+              ['Explain requirements (often misunderstood)', 'Test and iterate (hours)'],
+              ['Wait for development (weeks)', 'Deploy to Vercel (minutes)'],
+              ['Total: Months and thousands of dollars', 'Total: Same day, essentially free']
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Superpower 2: Automate With Intelligence'
+          },
+          {
+            type: 'highlight',
+            variant: 'example',
+            title: 'Example',
+            text: 'Customer email arrives → AI reads → Determines it\'s a refund request → Checks return policy → Auto-approves (under $100) or escalates → Drafts response → Human reviews. Result: 80% of tickets handled in seconds.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Superpower 3: Rapid Experimentation'
+          },
+          {
+            type: 'paragraph',
+            text: '"I wonder if we could..." → Build prototype in hours → Test with real data → Keep if it works, discard if not. Total investment: A few hours, not thousands of dollars.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Superpower 4: Bridge Business and Technology'
+          },
+          {
+            type: 'paragraph',
+            text: 'Business people know what they need but can\'t build it. Developers can build but misunderstand requirements. Your new role: Understand the business need AND prototype the solution. You become the translator and accelerator.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'The Reality Check'
+          },
+          {
+            type: 'list',
+            items: [
+              'WON\'T make you: A senior software engineer, expert in CS theory, able to optimize complex algorithms',
+              'WILL make you: Capable of building functional apps, able to automate work, dangerous enough to prototype ideas, better communicator with tech teams, self-sufficient for internal tools'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'The Goal',
+            text: 'You shouldn\'t need to hire a developer for every simple need. You shouldn\'t be blocked from testing ideas. You should be empowered to build and automate at the speed of thought.'
+          }
+        ]
+      },
+      {
+        id: 'section-0-6',
+        title: 'What You Need to Get Started',
+        estimatedTime: '5 min',
+        content: [
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Required (Free)'
+          },
+          {
+            type: 'list',
+            items: [
+              'Computer (Mac, Windows, or Linux)',
+              'Internet connection',
+              'Claude.ai account (free tier is fine to start)',
+              'Text editor (we\'ll set up later)',
+              'Curiosity and willingness to experiment'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Helpful But Not Required'
+          },
+          {
+            type: 'list',
+            items: [
+              'ChatGPT account (free tier)',
+              'Google account (for Google AI Studio)',
+              'GitHub account (free - we\'ll set up)',
+              'Vercel account (free - we\'ll set up)'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'NOT Required'
+          },
+          {
+            type: 'list',
+            items: [
+              'Prior coding experience',
+              'Computer science degree',
+              'Math beyond basic arithmetic',
+              'Expensive software'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'Time Commitment',
+            text: 'Course material: ~20 hours to complete. Practice projects: As much as you want. Expect to feel productive by Week 2. Expect to build real tools by Week 4.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Learning Approach'
+          },
+          {
+            type: 'list',
+            items: [
+              'Read concepts (to understand)',
+              'Follow examples (to see patterns)',
+              'Build projects (to internalize)',
+              'Break things (to learn debugging)',
+              'Ship things (to build confidence)'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'section-0-7',
+        title: 'How to Use This Course',
+        estimatedTime: '5 min',
+        content: [
+          {
+            type: 'heading',
+            level: 3,
+            text: 'The Structure'
+          },
+          {
+            type: 'list',
+            items: [
+              'Modules: Big topics (like "Understanding AI Tools")',
+              'Sections: Specific concepts within modules',
+              'Quizzes: Test understanding before moving forward',
+              'Projects: Hands-on application of concepts',
+              'Glossary: Reference for terminology'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Learning Path'
+          },
+          {
+            type: 'numbered-list',
+            items: [
+              'Read the module - Understand concepts',
+              'Take the quiz - Verify understanding (must pass 70% to continue)',
+              'Do the project (if included) - Apply what you learned',
+              'Move to next module - Build on your knowledge'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Study Tips'
+          },
+          {
+            type: 'list',
+            items: [
+              'Don\'t rush - Understanding beats speed',
+              'Take notes - Build your personal reference guide',
+              'Experiment - Try things not explicitly in the course',
+              'Break things - Debugging teaches you more than success',
+              'Build what interests you - Motivation matters'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'When You Get Stuck'
+          },
+          {
+            type: 'list',
+            items: [
+              'Re-read the relevant section',
+              'Check the glossary for terminology',
+              'Search for the error message (Google is your friend)',
+              'Break down the problem into smaller pieces',
+              'Ask AI (Claude, ChatGPT) to explain differently'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'Suggested Pacing',
+            text: 'Week 1: Module 0-2 (Foundations + Terminal). Week 2: Modules 3-4 (Connecting + Tools). Week 3: Modules 5-7 (Building + Decisions). Week 4: Modules 8-9 (Mindset + Projects). Weeks 5-6: Modules 10-12 (Next Steps + Setup). Week 7+: Build your own projects.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Success Metrics'
+          },
+          {
+            type: 'list',
+            items: [
+              'Can you explain concepts to someone else?',
+              'Can you build something without referencing the course?',
+              'Do error messages make sense to you now?',
+              'Are you comfortable experimenting?'
+            ]
+          },
+          {
+            type: 'paragraph',
+            text: 'If yes to these → You\'re succeeding. Let\'s begin!'
+          }
+        ]
+      }
+    ]
+  },
+  {
     id: 'module-1',
     title: 'ABSOLUTE BASICS',
     description: 'Understanding the fundamental concepts of programming and how computers process instructions.',

@@ -65,6 +65,11 @@ export const glossary = [
     category: 'Concepts'
   },
   {
+    term: 'Conditional Automation',
+    definition: 'Automation with multiple branches and logic paths (IF-THEN-ELSE), but still following predetermined rules for all scenarios.',
+    category: 'AI'
+  },
+  {
     term: 'CSS',
     definition: 'Cascading Style Sheets - a language for describing the visual presentation of HTML elements.',
     category: 'Frontend'
@@ -88,6 +93,11 @@ export const glossary = [
     term: 'Function',
     definition: 'A reusable block of code that performs a specific task, takes inputs (parameters), and may return an output.',
     category: 'Concepts'
+  },
+  {
+    term: 'Generative AI',
+    definition: 'AI systems that create new content (text, images, code, music) rather than just analyzing or categorizing existing information.',
+    category: 'AI'
   },
   {
     term: 'Git',
@@ -145,9 +155,19 @@ export const glossary = [
     category: 'Concepts'
   },
   {
+    term: 'LLM (Large Language Model)',
+    definition: 'AI systems trained on massive amounts of text that can understand and generate human-like text, enabling natural language interaction. Examples: Claude, ChatGPT, Gemini.',
+    category: 'AI'
+  },
+  {
     term: 'Loop',
     definition: 'A programming construct that repeats a block of code multiple times.',
     category: 'Concepts'
+  },
+  {
+    term: 'Machine Learning (ML)',
+    definition: 'Teaching computers to learn from examples rather than explicit programming, enabling pattern recognition and prediction.',
+    category: 'AI'
   },
   {
     term: 'Merge',
@@ -162,6 +182,11 @@ export const glossary = [
   {
     term: 'Multi-Agent Network',
     definition: 'A system where multiple AI agents work together, each specializing in different tasks and coordinating to achieve complex goals.',
+    category: 'AI'
+  },
+  {
+    term: 'Natural Language Processing (NLP)',
+    definition: 'Technology that allows computers to understand, interpret, and generate human language, making AI assistants possible.',
     category: 'AI'
   },
   {
@@ -253,6 +278,11 @@ export const glossary = [
     term: 'Scope',
     definition: 'The context that determines where variables and functions are accessible in code.',
     category: 'Concepts'
+  },
+  {
+    term: 'Simple Automation',
+    definition: 'Setting up fixed IF-THEN rules that execute without variation, requiring no intelligence or decision-making.',
+    category: 'AI'
   },
   {
     term: 'State',
