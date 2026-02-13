@@ -10,6 +10,16 @@ export const glossary = [
     category: 'Security'
   },
   {
+    term: 'Agentic Workflow',
+    definition: 'An automation where you define the steps but AI makes decisions at each step, following a predefined path with intelligent choices.',
+    category: 'AI'
+  },
+  {
+    term: 'AI Agent',
+    definition: 'An autonomous AI system that determines its own steps to reach a goal, planning and executing actions without predefined paths.',
+    category: 'AI'
+  },
+  {
     term: 'Array',
     definition: 'A data structure that stores multiple values in a single variable, accessed by index.',
     category: 'Data Types'
@@ -95,6 +105,11 @@ export const glossary = [
     category: 'Concepts'
   },
   {
+    term: 'Google AI Studio',
+    definition: 'Google\'s experimental interface for testing AI models, excelling at multimodal testing with text, images, audio, and video.',
+    category: 'Tools'
+  },
+  {
     term: 'Hook',
     definition: 'In React, a function that lets you use state and other features in functional components.',
     category: 'Frontend'
@@ -138,6 +153,16 @@ export const glossary = [
     term: 'Merge',
     definition: 'Combining changes from one Git branch into another.',
     category: 'Git'
+  },
+  {
+    term: 'MCP',
+    definition: 'Model Context Protocol - a standardized way for AI tools to connect to external services and data sources.',
+    category: 'AI'
+  },
+  {
+    term: 'Multi-Agent Network',
+    definition: 'A system where multiple AI agents work together, each specializing in different tasks and coordinating to achieve complex goals.',
+    category: 'AI'
   },
   {
     term: 'Node.js',
@@ -195,9 +220,19 @@ export const glossary = [
     category: 'Concepts'
   },
   {
+    term: 'Relevance AI',
+    definition: 'A platform for building AI agents with a visual interface, good for creating agents that use multiple tools and data sources.',
+    category: 'Tools'
+  },
+  {
     term: 'Repository',
     definition: 'A storage location for a project\'s files and their complete version history.',
     category: 'Git'
+  },
+  {
+    term: 'Reworkd',
+    definition: 'A platform for building web-scraping and data extraction agents that can navigate websites and collect information.',
+    category: 'Tools'
   },
   {
     term: 'REST API',

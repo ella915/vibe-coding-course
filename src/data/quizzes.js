@@ -543,6 +543,45 @@ export const quizzes = [
         ],
         correctAnswer: 2,
         explanation: 'Refactoring means improving existing code structure or quality without changing what it does.'
+      },
+      {
+        id: 'q6-10',
+        type: 'multiple-choice',
+        question: 'What\'s the main difference between an agentic workflow and an AI agent?',
+        options: [
+          'Agentic workflows are more expensive to run',
+          'Agentic workflow follows predefined steps with AI decisions; AI agent determines its own steps to reach a goal',
+          'AI agents are always faster than agentic workflows',
+          'There is no meaningful difference between them'
+        ],
+        correctAnswer: 1,
+        explanation: 'Agentic workflows follow predefined steps where AI makes decisions at each step. AI agents autonomously determine their own steps to reach a goal.'
+      },
+      {
+        id: 'q6-11',
+        type: 'multiple-choice',
+        question: 'When should you use Google AI Studio vs n8n?',
+        options: [
+          'Google AI Studio for production; n8n for testing',
+          'Google AI Studio for testing/prototyping AI capabilities; n8n for deploying production workflows',
+          'They serve the same purpose and are interchangeable',
+          'Google AI Studio for automation; n8n for code generation'
+        ],
+        correctAnswer: 1,
+        explanation: 'Google AI Studio is best for testing and prototyping AI capabilities, while n8n is better for deploying production workflows with reliable execution.'
+      },
+      {
+        id: 'q6-12',
+        type: 'multiple-choice',
+        question: 'What\'s the pragmatic approach to using multiple AI platforms?',
+        options: [
+          'Learn all platforms equally before starting any project',
+          'Start with one platform that fits 80% of use cases, add others only when hitting clear limitations',
+          'Use a different platform for each project',
+          'Always use at least three platforms simultaneously'
+        ],
+        correctAnswer: 1,
+        explanation: 'Start with one platform that handles most of your needs. Add others only when you hit clear limitations that another platform solves.'
       }
     ]
   },

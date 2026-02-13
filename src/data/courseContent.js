@@ -537,6 +537,71 @@ export const courseContent = [
             text: 'You don\'t need all these tools. Start with one (Claude Code is a great choice), learn it well, then explore others as needed.'
           }
         ]
+      },
+      {
+        id: 'section-4-8',
+        title: 'Google AI Studio - Experimental Playground',
+        estimatedTime: '15 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Google AI Studio is Google\'s experimental interface for testing Gemini models. Think of it as a playground where you can experiment with AI capabilities before building production systems.'
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'Key Capability',
+            text: 'Google AI Studio excels at multimodal testing - combining text, images, video, and audio in a single prompt. This makes it perfect for prototyping AI features that work with multiple input types.'
+          },
+          {
+            type: 'paragraph',
+            text: 'The prompt engineering lab lets you adjust parameters like temperature (0-2 for creativity), top-k, top-p, and max tokens. This helps you understand how different settings affect AI responses before committing to code.'
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'Instant Code Generation',
+            text: 'After perfecting your prompt, Google AI Studio automatically generates production-ready code in Python, JavaScript, or cURL. No manual translation needed.'
+          },
+          {
+            type: 'comparison',
+            title: 'When to Use Google AI Studio',
+            headers: ['Use For', 'Don\'t Use For'],
+            rows: [
+              ['Testing multimodal prompts', 'Building complete apps'],
+              ['Comparing model versions', 'Connecting services'],
+              ['Prompt optimization', 'Production deployments'],
+              ['Prototyping AI features', 'End-user applications']
+            ]
+          },
+          {
+            type: 'comparison',
+            title: 'Tool Comparison',
+            headers: ['Tool', 'Best For'],
+            rows: [
+              ['Google AI Studio', 'Multimodal testing, prototyping'],
+              ['Claude.ai', 'Reasoning, detailed explanations'],
+              ['ChatGPT', 'Plugins, broad knowledge'],
+              ['Cursor/Claude Code', 'Actually building apps']
+            ]
+          },
+          {
+            type: 'paragraph',
+            text: 'Getting started is simple: access aistudio.google.com, create a freeform prompt, test with various media types, then save and export your code when ready.'
+          },
+          {
+            type: 'highlight',
+            variant: 'warning',
+            title: 'Limitations',
+            text: 'Free tier limits: 60 requests/minute, images up to 20MB, videos up to 2GB. Remember this is experimental - APIs and features may change.'
+          },
+          {
+            type: 'highlight',
+            variant: 'example',
+            title: 'Real Business Use Case',
+            text: 'Envato used Google AI Studio to test AI quality checks for digital assets before building their production review system. They validated prompt effectiveness with real images before writing any backend code.'
+          }
+        ]
       }
     ]
   },
@@ -722,6 +787,172 @@ export const courseContent = [
             variant: 'tip',
             title: 'Alternative Approaches',
             text: 'When AI isn\'t working: search for existing solutions, read documentation, ask in developer communities, or simplify your requirements.'
+          }
+        ]
+      },
+      {
+        id: 'section-6-4',
+        title: 'Understanding AI Agents and Agentic Workflows',
+        estimatedTime: '35 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'As AI tools mature, you\'ll encounter two related but distinct concepts: agentic workflows and AI agents. Understanding the difference helps you choose the right approach for each task.'
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'What is an AI Agent?',
+            text: 'An AI agent is software that perceives its environment, makes decisions, and takes actions autonomously to achieve goals. You define the goal; the agent determines how to reach it.'
+          },
+          {
+            type: 'paragraph',
+            text: 'Think of the evolution in three levels: Level 1 (AI Chat) where humans drive every step, Level 2 (Agentic Workflows) where AI makes decisions within a predefined workflow, and Level 3 (AI Agents) where the agent autonomously determines its strategy.'
+          },
+          {
+            type: 'highlight',
+            variant: 'example',
+            title: 'The GPS Analogy',
+            text: 'An agentic workflow is like a GPS route you programmed - it follows your predetermined path with smart decisions at intersections. An AI agent is like a driver who knows the destination and chooses their own route entirely.'
+          },
+          {
+            type: 'comparison',
+            title: 'When You Need Each',
+            headers: ['Need an Agent When', 'Workflow Sufficient When'],
+            rows: [
+              ['Path to goal isn\'t predetermined', 'Workflow is consistent'],
+              ['Strategy adapts based on results', 'Steps clearly defined'],
+              ['Multiple approaches exist', 'One-time task'],
+              ['Autonomous operation for extended periods', 'Human judgment critical at each step'],
+              ['Multi-step reasoning required', 'Predictable decision trees']
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'Cost Consideration',
+            text: 'Agentic workflows are cheaper and more predictable to run. Full AI agents are more expensive but adaptive. Choose based on task complexity and budget.'
+          },
+          {
+            type: 'paragraph',
+            text: 'The practical reality: 80% of business use cases are handled well by agentic workflows. Only 20% truly benefit from autonomous agents.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Platform Comparison'
+          },
+          {
+            type: 'paragraph',
+            text: 'Multiple platforms exist because each excels at different jobs. Here\'s how they compare:'
+          },
+          {
+            type: 'comparison',
+            title: 'AI Agent & Workflow Platforms',
+            headers: ['Platform', 'What It Is', 'Best For'],
+            rows: [
+              ['Relevance AI', 'No-code agent platform with multi-agent orchestration', 'Non-technical teams, research agents, managed AI'],
+              ['Reworkd', 'Specialized web automation agents', 'Data extraction, market research, lead generation'],
+              ['n8n', 'Visual workflow automation with AI integration', 'Defined processes with AI enhancement, cost-effective'],
+              ['Google AI Studio', 'Testing playground for Gemini', 'Prototyping, prompt testing, comparing models']
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'example',
+            title: 'Relevance AI Use Case',
+            text: 'A competitive intelligence agent that daily researches competitor pricing and automatically updates your spreadsheet. No coding required - just define the goal and data sources.'
+          },
+          {
+            type: 'highlight',
+            variant: 'example',
+            title: 'Reworkd Use Case',
+            text: 'Monitor 50 competitor job postings daily, automatically extracting title, salary, location, and required skills. Handles JavaScript-heavy sites and adapts when layouts change.'
+          },
+          {
+            type: 'highlight',
+            variant: 'example',
+            title: 'n8n Use Case',
+            text: 'Support ticket arrives → AI categorizes priority → Routes to appropriate team → Logs to database → Sends notifications. Full control over logic, self-hostable, cost-effective.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Platform Selection Framework'
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'There is No "Better"',
+            text: '"Better" means better fit for YOUR specific use case, technical capability, budget, and goals. Don\'t optimize prematurely - start with one, expand when you hit clear limitations.'
+          },
+          {
+            type: 'code',
+            language: 'text',
+            title: 'Decision Tree',
+            code: 'IF you need web data extraction → Reworkd\nIF you need no-code agent deployment → Relevance AI\nIF you need cost-effective workflow automation → n8n\nIF you need to test AI capabilities first → Google AI Studio\n\nIF you need adaptive, autonomous behavior → Relevance AI (agents)\nIF you need defined process with AI decisions → n8n (workflows)\nIF you need specialized web automation → Reworkd\nIF you\'re prototyping before building → Google AI Studio'
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'The Pragmatic Approach',
+            text: 'Month 1: Pick ONE platform (usually n8n - cost-effective, flexible). Month 2-3: Build several workflows, understand limitations. Month 4+: Add second platform ONLY if you hit a specific limitation.'
+          },
+          {
+            type: 'list',
+            items: [
+              'Good combination: Google AI Studio (testing) + n8n (production) - test prompts, deploy workflows',
+              'Good combination: n8n (general automation) + Reworkd (specialized web scraping) - different jobs',
+              'Bad combination: Relevance AI + Reworkd for same job - redundant',
+              'Bad combination: All four for every project - overcomplicated'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Multi-Agent Networks'
+          },
+          {
+            type: 'paragraph',
+            text: 'Multiple AI agents can work together, each with specialized roles. Think of an orchestra: one conductor (orchestrator) coordinating multiple musicians (specialized agents).'
+          },
+          {
+            type: 'code',
+            language: 'text',
+            title: 'Example: Content Generation System',
+            code: 'Agent 1 (Research): Monitors industry news, identifies trends, compiles data\nAgent 2 (Writing): Takes research, writes draft blog post, optimizes for SEO\nAgent 3 (Editor): Reviews draft, checks facts and tone, suggests improvements\nAgent 4 (Publishing): Formats for CMS, schedules optimal time, shares to social\nOrchestrator: Coordinates all agents, ensures deadline met, handles failures'
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'Why Multiple Agents?',
+            text: 'Each can be optimized for its specific task. Easier to debug - isolate which agent failed. More modular - swap one agent without affecting others. Can use different AI models for different agents (cheap model for research, powerful for writing).'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Building Agentic Capabilities'
+          },
+          {
+            type: 'numbered-list',
+            items: [
+              'Start with single decision point (AI categorizes, workflow routes)',
+              'Add more AI decision points as confidence grows',
+              'Eventually chain multiple AI decisions',
+              'Finally, give agent autonomy for entire process'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'warning',
+            title: 'Safety and Control',
+            text: 'Always define spending/action limits. Log all agent decisions with reasoning. Human-in-the-loop for high-stakes decisions. Gradual autonomy increase (80% human review → 20% → exceptions only). Build rollback capability.'
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'Cost Management',
+            text: 'Set maximum API call limits per task. Use cheaper models for routine decisions, expensive for complex ones. Cache repetitive analyses. Monitor cost per OUTCOME, not just per API call.'
           }
         ]
       }
@@ -1486,6 +1717,70 @@ export const courseContent = [
             variant: 'concept',
             title: 'The Rhythm',
             text: 'Plan → Branch → Build → Test → Commit → Repeat. This rhythm keeps you moving forward while maintaining a clean history.'
+          }
+        ]
+      },
+      {
+        id: 'section-12-6',
+        title: 'Model Context Protocol (MCP)',
+        estimatedTime: '18 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Model Context Protocol (MCP) is a protocol that lets AI models access external tools and data sources securely. It extends AI capabilities beyond text generation to interacting with real systems.'
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'Why MCP Matters',
+            text: 'MCP transforms AI from a text-only assistant into one that can read files, query databases, search the web, execute code, and interact with your specific systems - all within a single conversation.'
+          },
+          {
+            type: 'paragraph',
+            text: 'How it works: MCP servers expose tools (functions the AI can call). The AI decides when to use them based on your task. Unlike regular APIs where you make predefined calls, MCP lets the AI discover and use tools dynamically.'
+          },
+          {
+            type: 'highlight',
+            variant: 'example',
+            title: 'MCP in Action',
+            text: 'You say: "Analyze this spreadsheet and update the database." With MCP, Claude can read the file, process the data, and write to your database - all in one conversation. Without MCP, you\'d need to manually copy data back and forth.'
+          },
+          {
+            type: 'code',
+            language: 'text',
+            title: 'Common MCP Servers',
+            code: 'File System Access - Read and write local files\nDatabase Queries - Connect to PostgreSQL, SQLite, etc.\nWeb Search - Search the internet for current information\nCalculator - Perform complex calculations\nCode Execution - Run code snippets safely\nGitHub - Interact with repositories and issues'
+          },
+          {
+            type: 'paragraph',
+            text: 'Setting up MCP with Claude Desktop: Configure MCP servers in the app settings, and Claude automatically uses the tools when relevant to your request.'
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'Custom MCP Servers',
+            text: 'For advanced users: you can create custom MCP servers exposing your own tools and APIs. This lets Claude interact with your proprietary systems.'
+          },
+          {
+            type: 'comparison',
+            title: 'When to Use MCP',
+            headers: ['Use MCP When', 'Skip MCP When'],
+            rows: [
+              ['AI needs to interact with your systems', 'Simple text-only tasks'],
+              ['You want more than text responses', 'Using web interface only'],
+              ['Building AI-powered workflows with tool access', 'Quick one-off questions'],
+              ['Need AI to read/write files or databases', 'No system integration needed']
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'warning',
+            title: 'Current Limitations',
+            text: 'MCP requires Claude Desktop app or API integration - not available in the web interface. It\'s still an evolving standard, so expect changes. Always review what tools you\'re exposing and their permissions.'
+          },
+          {
+            type: 'paragraph',
+            text: 'MCP represents the future of AI assistance - moving from chat-only to genuine collaboration where AI can take actions in your real environment. As you advance, explore MCP to unlock more powerful AI workflows.'
           }
         ]
       }
