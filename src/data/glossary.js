@@ -20,6 +20,11 @@ export const glossary = [
     category: 'AI'
   },
   {
+    term: 'Agent Communication',
+    definition: 'Methods by which agents in a network share data, including shared files, databases, message queues, or API endpoints.',
+    category: 'AI'
+  },
+  {
     term: 'Array',
     definition: 'A data structure that stores multiple values in a single variable, accessed by index.',
     category: 'Data Types'
@@ -90,6 +95,11 @@ export const glossary = [
     category: 'Frontend'
   },
   {
+    term: 'Feedback Loop Pattern',
+    definition: 'Agent network architecture where output is reviewed and fed back to creator agent for iterative refinement until quality criteria are met.',
+    category: 'AI'
+  },
+  {
     term: 'Function',
     definition: 'A reusable block of code that performs a specific task, takes inputs (parameters), and may return an output.',
     category: 'Concepts'
@@ -97,6 +107,11 @@ export const glossary = [
   {
     term: 'Generative AI',
     definition: 'AI systems that create new content (text, images, code, music) rather than just analyzing or categorizing existing information.',
+    category: 'AI'
+  },
+  {
+    term: 'Gemini Ultra',
+    definition: 'Google\'s most advanced AI model (Gemini 2.0 Ultra) with best performance on complex reasoning, longest context window, and advanced multimodal capabilities.',
     category: 'AI'
   },
   {
@@ -123,6 +138,11 @@ export const glossary = [
     term: 'Hook',
     definition: 'In React, a function that lets you use state and other features in functional components.',
     category: 'Frontend'
+  },
+  {
+    term: 'Hierarchical Agent Pattern',
+    definition: 'Network structure with manager agent that routes tasks to specialized worker agents based on task type or required expertise.',
+    category: 'AI'
   },
   {
     term: 'HTML',
@@ -180,6 +200,11 @@ export const glossary = [
     category: 'AI'
   },
   {
+    term: 'MCP Server',
+    definition: 'Program that exposes specific capabilities (file system access, database queries, APIs) that AI models can use through the Model Context Protocol.',
+    category: 'AI'
+  },
+  {
     term: 'Multi-Agent Network',
     definition: 'A system where multiple AI agents work together, each specializing in different tasks and coordinating to achieve complex goals.',
     category: 'AI'
@@ -205,6 +230,11 @@ export const glossary = [
     category: 'Data Types'
   },
   {
+    term: 'Orchestrator Agent',
+    definition: 'Agent responsible for coordinating other agents in a network, managing execution order, handling failures, and ensuring overall goal achievement.',
+    category: 'AI'
+  },
+  {
     term: 'Package',
     definition: 'A bundle of code that can be installed and used in your project.',
     category: 'Concepts'
@@ -213,6 +243,11 @@ export const glossary = [
     term: 'Parameter',
     definition: 'A variable in a function definition that receives a value when the function is called.',
     category: 'Concepts'
+  },
+  {
+    term: 'Parallel Execution',
+    definition: 'Agent network pattern where multiple agents run simultaneously on independent tasks, with results combined by an aggregator agent.',
+    category: 'AI'
   },
   {
     term: 'Path',
@@ -282,6 +317,11 @@ export const glossary = [
   {
     term: 'Simple Automation',
     definition: 'Setting up fixed IF-THEN rules that execute without variation, requiring no intelligence or decision-making.',
+    category: 'AI'
+  },
+  {
+    term: 'Sequential Pipeline',
+    definition: 'Agent network pattern where agents execute one after another, each agent\'s output becoming the next agent\'s input.',
     category: 'AI'
   },
   {

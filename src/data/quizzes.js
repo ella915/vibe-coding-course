@@ -1183,6 +1183,142 @@ export const quizzes = [
     ]
   },
   {
+    moduleId: 'module-13',
+    passingScore: 70,
+    questions: [
+      {
+        id: 'q13-1',
+        type: 'multiple-choice',
+        question: 'What\'s the main benefit of using multiple specialized agents instead of one general agent?',
+        options: [
+          'It\'s always cheaper',
+          'Specialization allows optimization per task, better quality, and fault isolation',
+          'It\'s required by law',
+          'Single agents don\'t work'
+        ],
+        correctAnswer: 1,
+        explanation: 'Specialized agents can use different models, prompts, and strategies optimized for their specific task, leading to better overall quality and easier debugging.'
+      },
+      {
+        id: 'q13-2',
+        type: 'multiple-choice',
+        question: 'Which agent network pattern is best when subtasks can run independently and simultaneously?',
+        options: [
+          'Sequential Pipeline',
+          'Parallel Execution with Aggregator',
+          'Feedback Loop',
+          'Hierarchical'
+        ],
+        correctAnswer: 1,
+        explanation: 'Parallel execution lets independent agents work at the same time, saving time compared to sequential processing.'
+      },
+      {
+        id: 'q13-3',
+        type: 'multiple-choice',
+        question: 'In an agent network, what does the Orchestrator agent do?',
+        options: [
+          'It does all the work itself',
+          'It coordinates other agents, manages the workflow, and handles errors',
+          'It only monitors but never takes action',
+          'It replaces all other agents'
+        ],
+        correctAnswer: 1,
+        explanation: 'The orchestrator coordinates the network, determining execution order, handling failures, and ensuring the overall goal is achieved.'
+      },
+      {
+        id: 'q13-4',
+        type: 'multiple-choice',
+        question: 'What\'s the simplest way for agents to share data with each other?',
+        options: [
+          'Telepathy',
+          'Shared file system where each agent reads/writes files',
+          'Email',
+          'Verbal communication'
+        ],
+        correctAnswer: 1,
+        explanation: 'A shared file system is the simplest method - agents write outputs to files and other agents read those files as inputs.'
+      },
+      {
+        id: 'q13-5',
+        type: 'multiple-choice',
+        question: 'What should you do when an agent in your network repeatedly fails?',
+        options: [
+          'Delete the entire network',
+          'Implement retry logic, fallback behavior, and alert for human intervention',
+          'Ignore it',
+          'Run it faster'
+        ],
+        correctAnswer: 1,
+        explanation: 'Proper error handling includes retrying with backoff, using fallback data when available, and alerting humans when issues persist.'
+      },
+      {
+        id: 'q13-6',
+        type: 'multiple-choice',
+        question: 'How can you reduce costs in an agent network?',
+        options: [
+          'Use cheaper models for simple tasks, cache outputs, batch processing',
+          'Run agents more frequently',
+          'Use the most expensive models for everything',
+          'Disable monitoring'
+        ],
+        correctAnswer: 0,
+        explanation: 'Cost optimization includes using appropriately-sized models, caching to avoid redundant work, and batching to reduce API calls.'
+      },
+      {
+        id: 'q13-7',
+        type: 'multiple-choice',
+        question: 'What\'s the difference between an agentic workflow and an agent network?',
+        options: [
+          'They\'re exactly the same',
+          'Agentic workflow is structured with AI at decision points; agent network has multiple autonomous agents coordinating',
+          'Agent networks are always simpler',
+          'Agentic workflows can\'t use AI'
+        ],
+        correctAnswer: 1,
+        explanation: 'Agentic workflows follow predetermined paths with AI making decisions, while agent networks involve multiple autonomous agents working together.'
+      },
+      {
+        id: 'q13-8',
+        type: 'multiple-choice',
+        question: 'When should you build your own agent network vs using a platform like Relevance AI?',
+        options: [
+          'Always build your own',
+          'Build for unique workflows and control; use platforms for standard use cases and faster setup',
+          'Never build your own',
+          'It doesn\'t matter'
+        ],
+        correctAnswer: 1,
+        explanation: 'Custom building gives control and handles unique needs, while platforms offer faster setup for common use cases with less technical expertise needed.'
+      },
+      {
+        id: 'q13-9',
+        type: 'multiple-choice',
+        question: 'In a feedback loop pattern, what determines when the loop stops?',
+        options: [
+          'It never stops',
+          'Quality criteria met, maximum iterations reached, or human intervention',
+          'Random chance',
+          'When it gets tired'
+        ],
+        correctAnswer: 1,
+        explanation: 'Feedback loops need termination conditions: success criteria, iteration limits, or manual override to prevent infinite loops.'
+      },
+      {
+        id: 'q13-10',
+        type: 'multiple-choice',
+        question: 'What\'s the recommended progression for learning agent networks?',
+        options: [
+          'Start with the most complex multi-agent system',
+          'Begin with simple agentic workflow, then simple sequential agents, then complex orchestration',
+          'Jump directly to production systems',
+          'Skip the basics'
+        ],
+        correctAnswer: 1,
+        explanation: 'Start simple to learn fundamentals, prove value, then gradually add complexity as needs and skills grow.'
+      }
+    ]
+  },
+  {
     moduleId: 'final-quiz',
     passingScore: 70,
     questions: [

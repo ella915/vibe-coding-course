@@ -574,6 +574,103 @@ export const courseContent = [
             text: 'If yes to these → You\'re succeeding. Let\'s begin!'
           }
         ]
+      },
+      {
+        id: 'section-0-8',
+        title: 'Google AI Ultra (Gemini 2.0) - The Next Generation',
+        estimatedTime: '10 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Google AI Ultra (officially Gemini 2.0 Ultra) is Google\'s most advanced AI model, representing the cutting edge of multimodal AI capabilities. Understanding where it fits helps you see the full AI landscape.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'The Gemini Family Hierarchy'
+          },
+          {
+            type: 'comparison',
+            title: 'Gemini Models Compared',
+            headers: ['Model', 'Speed', 'Cost', 'Best For'],
+            rows: [
+              ['Gemini Flash', 'Fastest', 'Cheapest', 'Simple tasks, speed matters'],
+              ['Gemini Pro', 'Balanced', 'Moderate', 'Most daily tasks'],
+              ['Gemini Ultra', 'Slower', 'Highest', 'Complex reasoning, quality critical']
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'example',
+            title: 'Car Engine Analogy',
+            text: 'Flash = 4-cylinder (efficient daily driver). Pro = V6 (balanced power and efficiency). Ultra = V8 (maximum power when needed).'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'What Ultra Excels At'
+          },
+          {
+            type: 'list',
+            items: [
+              'Complex reasoning: Multi-step logic, scientific analysis, strategic planning',
+              'Long-context understanding: Analyzing entire codebases (100,000+ lines), multiple long documents',
+              'Multimodal fusion: Analyzing video + audio + transcript together, understanding image sequences',
+              'Advanced code generation: Production-quality code, understanding large codebases, debugging complex issues'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'When to Use Each Model'
+          },
+          {
+            type: 'list',
+            items: [
+              'Use Flash for: Simple categorization, quick translations, basic extraction, chatbot responses',
+              'Use Pro for: Content generation, moderate coding, document analysis, most daily AI tasks',
+              'Use Ultra for: Strategic analysis, complex code refactoring, legal/medical documents, research synthesis'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Cost Reality'
+          },
+          {
+            type: 'paragraph',
+            text: 'Ultra is significantly more expensive than Flash/Pro. Example - analyzing 10 documents (100K tokens): Flash ~$0.10, Pro ~$0.50, Ultra ~$1.50. For most tasks, Pro or Flash is sufficient. Use Ultra strategically.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Ultra vs Claude Opus vs GPT-4'
+          },
+          {
+            type: 'list',
+            items: [
+              'Google Ultra strengths: Multimodal (video, audio), longest context window, Google ecosystem integration',
+              'Claude Opus strengths: Nuanced writing, following complex instructions, careful reasoning',
+              'GPT-4 strengths: Broad knowledge, plugin ecosystem, established reputation',
+              'Reality: All three are extremely capable. Choice often comes down to ecosystem, task requirements, cost, and preference'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'For This Course',
+            text: 'You\'ll primarily use Claude because it\'s great for learning and coding with clear explanations. But knowing Ultra exists helps you understand the competitive landscape and multimodal possibilities. Don\'t overthink model choice - most models handle most tasks well.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'The Future Direction'
+          },
+          {
+            type: 'paragraph',
+            text: 'Ultra represents where AI is heading: multimodal by default (not just text), massive context (entire codebases), specialized reasoning (science, math, code), and agentic capabilities (tool use, autonomous behavior). Understanding Ultra helps you see what\'s possible and coming next.'
+          }
+        ]
       }
     ]
   },
@@ -2544,6 +2641,619 @@ export const courseContent = [
           {
             type: 'paragraph',
             text: 'MCP represents the future of AI assistance - moving from chat-only to genuine collaboration where AI can take actions in your real environment. As you advance, explore MCP to unlock more powerful AI workflows.'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'module-13',
+    title: 'BUILDING AGENTIC AI NETWORKS',
+    description: 'Learn to create systems where multiple AI agents work together to accomplish complex tasks.',
+    sections: [
+      {
+        id: 'section-13-1',
+        title: 'Why Use Multiple Agents?',
+        estimatedTime: '12 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'So far, you\'ve worked with single AI interactions - one prompt, one response. But what if you need different "experts" for different parts of a task? That\'s where agent networks come in.'
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'The Multi-Agent Advantage',
+            text: 'Instead of one AI trying to do everything, you create specialized agents that each excel at one thing. A research agent finds information. An analysis agent interprets it. A writing agent creates content. Together, they\'re more effective than one generalist.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Single Agent vs Multi-Agent'
+          },
+          {
+            type: 'comparison',
+            title: 'When to Use Each Approach',
+            headers: ['Single Agent', 'Multi-Agent Network'],
+            rows: [
+              ['Simple, well-defined tasks', 'Complex, multi-step processes'],
+              ['One type of expertise needed', 'Multiple specializations required'],
+              ['Quick, one-off responses', 'Ongoing, coordinated work'],
+              ['Simple: easy to debug', 'Complex: harder to debug but more capable']
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Real-World Multi-Agent Examples'
+          },
+          {
+            type: 'highlight',
+            variant: 'example',
+            title: 'Competitor Intelligence System',
+            text: 'Agent 1 (Web Monitor): Checks competitor websites daily for changes. Agent 2 (News Scanner): Searches for competitor mentions in news. Agent 3 (Analysis): Combines findings into insights. Agent 4 (Report Writer): Creates executive summary. Result: Daily competitive intelligence with no manual work.'
+          },
+          {
+            type: 'highlight',
+            variant: 'example',
+            title: 'Content Production Pipeline',
+            text: 'Agent 1 (Research): Gathers facts and sources. Agent 2 (Outliner): Creates content structure. Agent 3 (Writer): Drafts the content. Agent 4 (Editor): Reviews and polishes. Agent 5 (SEO): Optimizes for search. Result: High-quality content at scale.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Why Specialization Works'
+          },
+          {
+            type: 'list',
+            items: [
+              'Different models for different tasks: Use cheap/fast models for simple work, powerful models for complex analysis',
+              'Optimized prompts: Each agent has prompts tuned for its specific job',
+              'Better quality control: Each output can be reviewed before moving to next stage',
+              'Fault isolation: If one agent fails, others can continue or retry',
+              'Parallel execution: Independent agents can work simultaneously'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'section-13-2',
+        title: 'Agent Network Patterns',
+        estimatedTime: '15 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'There are several common patterns for organizing multiple agents. Each has its strengths depending on your use case.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Pattern 1: Sequential Pipeline'
+          },
+          {
+            type: 'paragraph',
+            text: 'Agents execute one after another, each passing output to the next. Like an assembly line.'
+          },
+          {
+            type: 'diagram',
+            variant: 'flow',
+            title: 'Sequential Flow',
+            steps: ['Input', 'Agent A', 'Agent B', 'Agent C', 'Output']
+          },
+          {
+            type: 'list',
+            items: [
+              'Best for: Processes where each step depends on the previous',
+              'Example: Research → Analysis → Report → Review',
+              'Pros: Simple to understand, easy to debug',
+              'Cons: Slow (must wait for each step), one failure blocks all'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Pattern 2: Parallel Execution with Aggregator'
+          },
+          {
+            type: 'paragraph',
+            text: 'Multiple agents work simultaneously on different subtasks. An aggregator combines their outputs.'
+          },
+          {
+            type: 'list',
+            items: [
+              'Best for: Independent subtasks that can run simultaneously',
+              'Example: Check 5 competitor websites in parallel, then combine findings',
+              'Pros: Fast (parallel execution), fault tolerant',
+              'Cons: More complex coordination, aggregation can be tricky'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Pattern 3: Hierarchical (Manager + Workers)'
+          },
+          {
+            type: 'paragraph',
+            text: 'A manager agent coordinates specialized worker agents, routing tasks based on type.'
+          },
+          {
+            type: 'list',
+            items: [
+              'Best for: Varied task types needing different specialists',
+              'Example: Support manager routes to billing, technical, or shipping agents',
+              'Pros: Flexible routing, specialized handling',
+              'Cons: Manager is single point of failure, routing logic can get complex'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Pattern 4: Feedback Loop'
+          },
+          {
+            type: 'paragraph',
+            text: 'One agent creates, another reviews, feedback cycles until quality threshold met.'
+          },
+          {
+            type: 'list',
+            items: [
+              'Best for: Quality-critical content that benefits from iteration',
+              'Example: Writer creates draft → Reviewer critiques → Writer revises → repeat until approved',
+              'Pros: High quality output, self-improving',
+              'Cons: Can loop forever (need termination conditions), expensive'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Pattern 5: Orchestrator Pattern'
+          },
+          {
+            type: 'paragraph',
+            text: 'A central orchestrator agent decides dynamically which agents to call, in what order, based on the task.'
+          },
+          {
+            type: 'list',
+            items: [
+              'Best for: Complex, variable workflows where the path isn\'t predetermined',
+              'Example: Orchestrator assesses task → decides to use research, skip analysis, go straight to writing',
+              'Pros: Most flexible, adapts to situation',
+              'Cons: Most complex to build, orchestrator needs to be smart'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'Start Simple',
+            text: 'Begin with sequential pipelines. Add complexity (parallel, hierarchical) only when needed. Many real problems are solved with simple 3-4 agent sequential flows.'
+          }
+        ]
+      },
+      {
+        id: 'section-13-3',
+        title: 'Building Your First Agent Network',
+        estimatedTime: '18 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Let\'s build a practical 3-agent network: a simple content research and creation pipeline.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'The Goal'
+          },
+          {
+            type: 'paragraph',
+            text: 'Create a system that takes a topic, researches it, analyzes the findings, and produces a summary. Three specialized agents working together.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Agent 1: Research Agent'
+          },
+          {
+            type: 'list',
+            items: [
+              'Job: Find relevant information about the topic',
+              'Input: Topic name/question',
+              'Output: List of key facts, sources, and data points',
+              'Model: Can use faster/cheaper model (GPT-3.5, Claude Haiku)',
+              'Why separate: Research requires breadth, not depth'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Agent 2: Analysis Agent'
+          },
+          {
+            type: 'list',
+            items: [
+              'Job: Interpret research, find patterns, draw conclusions',
+              'Input: Research Agent\'s output',
+              'Output: Key insights, trends, recommendations',
+              'Model: Use more capable model (GPT-4, Claude Opus)',
+              'Why separate: Analysis requires deep reasoning'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Agent 3: Writer Agent'
+          },
+          {
+            type: 'list',
+            items: [
+              'Job: Turn analysis into polished, readable content',
+              'Input: Analysis Agent\'s insights',
+              'Output: Final summary/report',
+              'Model: Model good at writing (Claude, GPT-4)',
+              'Why separate: Writing style differs from analytical thinking'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Implementation with n8n'
+          },
+          {
+            type: 'numbered-list',
+            items: [
+              'Create workflow with trigger (manual or scheduled)',
+              'Add first AI node: Research Agent with research-focused prompt',
+              'Connect output to second AI node: Analysis Agent',
+              'Connect to third AI node: Writer Agent',
+              'Add output (email, Slack, save to file)'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'Prompt Engineering for Agents',
+            text: 'Each agent needs a focused system prompt. Research Agent: "You are a research specialist. Find factual information. List sources. Be thorough but concise." Analysis Agent: "You are an analyst. Identify patterns and insights. Draw conclusions. Be logical." Writer Agent: "You are a writer. Create clear, engaging content. Use the analysis provided. Match the requested tone."'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Testing Your Network'
+          },
+          {
+            type: 'numbered-list',
+            items: [
+              'Run with simple topic first ("Benefits of remote work")',
+              'Check each agent\'s output individually',
+              'Verify handoffs: Does Agent 2 receive Agent 1\'s output correctly?',
+              'Evaluate final output: Is it better than single-agent approach?',
+              'Iterate on prompts based on results'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'section-13-4',
+        title: 'Agent Communication Methods',
+        estimatedTime: '12 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Agents need to share data with each other. Here are the main approaches, from simple to complex.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Method 1: Shared File System'
+          },
+          {
+            type: 'list',
+            items: [
+              'How it works: Agents read/write to shared folder or cloud storage',
+              'Example: Research Agent writes to research_output.json, Analysis Agent reads it',
+              'Pros: Simple, easy to debug (just look at files), works everywhere',
+              'Cons: Not real-time, can have race conditions',
+              'Best for: Sequential pipelines, batch processing'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Method 2: Database'
+          },
+          {
+            type: 'list',
+            items: [
+              'How it works: Agents read/write to shared database',
+              'Example: Each agent updates status in Supabase table',
+              'Pros: Structured data, query capabilities, concurrent access',
+              'Cons: Requires database setup, more complexity',
+              'Best for: Production systems, when you need to query history'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Method 3: Message Queue'
+          },
+          {
+            type: 'list',
+            items: [
+              'How it works: Agents publish/subscribe to message queues',
+              'Example: Research Agent publishes to "research-complete" queue',
+              'Pros: Decoupled, scalable, handles failures well',
+              'Cons: Most complex, requires queue infrastructure',
+              'Best for: High-volume, distributed systems'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Method 4: Direct API Calls'
+          },
+          {
+            type: 'list',
+            items: [
+              'How it works: One agent calls another agent\'s API endpoint',
+              'Example: Orchestrator calls /research-agent endpoint',
+              'Pros: Fully decoupled, can use different technologies',
+              'Cons: Most complex, requires hosting each agent',
+              'Best for: Microservices architecture'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'Recommendation for Beginners',
+            text: 'Start with Shared File System (Method 1). It\'s simple to understand, easy to debug (just look at files), and works for most use cases. Upgrade to database when you need history or concurrent access.'
+          }
+        ]
+      },
+      {
+        id: 'section-13-5',
+        title: 'Error Handling and Monitoring',
+        estimatedTime: '15 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Agent networks can fail in various ways. Here\'s how to handle common problems.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Problem 1: Agent Fails'
+          },
+          {
+            type: 'paragraph',
+            text: 'Example: Web scraping agent hits rate limit'
+          },
+          {
+            type: 'list',
+            items: [
+              'Retry logic: Try 3 times with increasing delays (1s, 5s, 15s)',
+              'Fallback behavior: Use cached data if available',
+              'Alert human: If repeatedly fails, send notification',
+              'Circuit breaker: Stop trying after too many failures'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Problem 2: Agent Produces Bad Output'
+          },
+          {
+            type: 'paragraph',
+            text: 'Example: Analysis agent hallucinates facts'
+          },
+          {
+            type: 'list',
+            items: [
+              'QA agent: Add a review agent that checks outputs',
+              'Confidence scores: Agent rates its own certainty',
+              'Human review: Flag high-stakes outputs for manual check',
+              'Validation rules: Check output format and required fields'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Problem 3: Agents Get Stuck in Loop'
+          },
+          {
+            type: 'paragraph',
+            text: 'Example: Creator and Reviewer keep rejecting each other\'s work'
+          },
+          {
+            type: 'list',
+            items: [
+              'Max iteration limits: Stop after 5 rounds',
+              'Progressive acceptance: Lower standards each round',
+              'Human arbitration: Escalate after threshold',
+              'Timeout: Abort after X minutes regardless'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Problem 4: One Agent Delays Entire Pipeline'
+          },
+          {
+            type: 'paragraph',
+            text: 'Example: News agent takes 30 minutes, blocks others'
+          },
+          {
+            type: 'list',
+            items: [
+              'Timeouts: If agent takes >10 minutes, skip it',
+              'Parallel execution: Run independent agents simultaneously',
+              'Caching: Reuse recent results when acceptable',
+              'Async processing: Don\'t wait, continue and merge later'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Monitoring Your Network'
+          },
+          {
+            type: 'list',
+            items: [
+              'Track: Agent status, execution time, cost per agent, success rate',
+              'Simple setup: Each agent logs to shared spreadsheet',
+              'Columns: timestamp, agent_name, status, duration, cost',
+              'Weekly review: Which agents are slowest? Most expensive? Most error-prone?'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'Start Simple',
+            text: 'Begin with spreadsheet logging. Add real-time dashboards (Grafana, Datadog) and Slack alerts only when scale demands it.'
+          }
+        ]
+      },
+      {
+        id: 'section-13-6',
+        title: 'Cost Optimization for Agent Networks',
+        estimatedTime: '10 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Agent networks can get expensive quickly. Here are strategies to optimize costs.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Strategy 1: Use Cheaper Models for Simple Tasks'
+          },
+          {
+            type: 'list',
+            items: [
+              'Expensive models (GPT-4, Claude Opus): Complex analysis, nuanced writing',
+              'Cheap models (GPT-3.5, Claude Haiku): Categorization, simple extraction',
+              'Example: Research Agent uses cheap model to gather data, Analysis Agent uses expensive model for insights'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Strategy 2: Cache Agent Outputs'
+          },
+          {
+            type: 'list',
+            items: [
+              'If web monitoring finds no changes, reuse yesterday\'s analysis',
+              'Don\'t regenerate reports if underlying data hasn\'t changed',
+              'Cache expensive API calls (news searches, web scrapes)'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Strategy 3: Batch Processing'
+          },
+          {
+            type: 'list',
+            items: [
+              'Instead of: Run full pipeline for each item (expensive)',
+              'Do: Collect 100 items, run pipeline once for batch (cheaper)',
+              'Example: Process all daily leads together instead of one-by-one'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Strategy 4: Incremental Updates'
+          },
+          {
+            type: 'list',
+            items: [
+              'Don\'t regenerate entire report weekly',
+              'Generate once, then only update changed sections',
+              'Example: Monday full report, Tuesday-Sunday just highlight changes'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Strategy 5: Smart Orchestration'
+          },
+          {
+            type: 'list',
+            items: [
+              'Don\'t always run all agents',
+              'Orchestrator decides: "No news this week? Skip News Agent"',
+              'Conditional execution based on triggers and thresholds'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'warning',
+            title: 'Track Your Costs',
+            text: 'Log every AI API call with its cost. Create weekly reports: total spend, cost per agent, cost per output. Set budgets and alerts when costs exceed thresholds.'
+          }
+        ]
+      },
+      {
+        id: 'section-13-7',
+        title: 'When to Build vs Buy Agent Networks',
+        estimatedTime: '8 min',
+        content: [
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Build Your Own When:'
+          },
+          {
+            type: 'list',
+            items: [
+              'Unique workflow specific to your business',
+              'Need full control over logic and data',
+              'Have technical resources available',
+              'Cost-sensitive (avoid platform fees)',
+              'Security requirements demand self-hosting'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Use a Platform (Relevance AI, etc.) When:'
+          },
+          {
+            type: 'list',
+            items: [
+              'Standard use cases (research, content, data processing)',
+              'Want faster setup and iteration',
+              'Team is non-technical',
+              'Value support and maintenance',
+              'Need enterprise features out of box'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Hybrid Approach'
+          },
+          {
+            type: 'paragraph',
+            text: 'Use platforms for most agents, build custom for specialized needs. Best of both worlds.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Recommended Progression'
+          },
+          {
+            type: 'numbered-list',
+            items: [
+              'Month 1: Single agentic workflow (n8n + Claude API) - Learn the basics, prove value',
+              'Month 2: Simple agent network (3-4 agents, sequential) - Add specialization',
+              'Month 3: Complex orchestration (parallel agents, feedback loops) - Production-grade with monitoring'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'Key Principle',
+            text: 'Don\'t build complex networks on day 1. Evolve into them as needs grow. Start with single agents, graduate to simple networks, add complexity only when justified by real requirements.'
           }
         ]
       }
