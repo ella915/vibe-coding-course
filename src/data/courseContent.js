@@ -671,6 +671,99 @@ export const courseContent = [
             text: 'Ultra represents where AI is heading: multimodal by default (not just text), massive context (entire codebases), specialized reasoning (science, math, code), and agentic capabilities (tool use, autonomous behavior). Understanding Ultra helps you see what\'s possible and coming next.'
           }
         ]
+      },
+      {
+        id: 'section-0-9',
+        title: 'Building Apps vs Building Agents - The Critical Distinction',
+        estimatedTime: '12 min',
+        content: [
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'The Common Confusion',
+            text: '"I\'m using Claude to build something. Am I building an app or an agent?" Let\'s clarify once and for all.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'What is an App?'
+          },
+          {
+            type: 'list',
+            items: [
+              'Definition: Software with a user interface that responds to user interactions',
+              'Key characteristic: Users drive every action',
+              'Examples: To-do list, dashboard, form builder, calculator',
+              'User experience: User opens app → Does something → App responds → Wait for next action',
+              'Users are always in control'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'What is an Agent?'
+          },
+          {
+            type: 'list',
+            items: [
+              'Definition: Autonomous software that pursues goals without requiring user input for each step',
+              'Key characteristic: Agent drives actions toward a goal you set',
+              'Examples: Competitive intelligence agent, pricing optimization agent, content generation agent',
+              'User experience: User sets goal → Agent figures out how → Agent takes actions → User reviews outcomes periodically',
+              'Agent operates autonomously between check-ins'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'The Spectrum (Not Binary)'
+          },
+          {
+            type: 'list',
+            items: [
+              'Pure App: Static website, simple calculator (user drives everything)',
+              'App with AI Features: Gmail smart compose, Grammarly (AI enhances, user controls)',
+              'App with Agent Components: CRM with auto-scoring leads (background AI work)',
+              'Pure Agent: Monitors competitors automatically, no user interface needed'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Decision Framework'
+          },
+          {
+            type: 'list',
+            items: [
+              '"Will this run without user interaction?" No → App. Yes → Agent',
+              '"Does user need to see/control every step?" Yes → App. No → Agent',
+              '"Is there a user interface?" Yes + user drives → App. No + runs autonomously → Pure agent'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Building Strategy'
+          },
+          {
+            type: 'list',
+            items: [
+              'For Apps: Design UI → Use Claude Code for frontend → Add backend with Supabase → Deploy to Vercel',
+              'For Agents: Define goal → Architect decision logic → Build in n8n or Relevance AI → Set up monitoring',
+              'For Hybrid: Build app + Add agent components for background tasks + Connect agent outputs to interface'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'The .md File Confusion',
+            text: 'A .md file with agent instructions is NOT an agent - it\'s just the instructions. You still need a platform (n8n, Relevance AI) to execute those instructions. The .md file is the brain, the platform is the body.'
+          },
+          {
+            type: 'paragraph',
+            text: 'Final clarity: Apps = Users interact → Software responds. Agents = Goal set → Software pursues autonomously. Most powerful systems combine both.'
+          }
+        ]
       }
     ]
   },
@@ -1460,6 +1553,264 @@ export const courseContent = [
             variant: 'example',
             title: 'Real Business Use Case',
             text: 'Envato used Google AI Studio to test AI quality checks for digital assets before building their production review system. They validated prompt effectiveness with real images before writing any backend code.'
+          }
+        ]
+      },
+      {
+        id: 'section-4-11',
+        title: 'Decoding the Acronyms - IDE vs AI vs Platforms',
+        estimatedTime: '12 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'The alphabet soup of tools can be confusing. Let\'s clarify what these acronyms actually mean.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'IDE (Integrated Development Environment)'
+          },
+          {
+            type: 'list',
+            items: [
+              'What it is: Software for writing code',
+              'Examples: VS Code, Cursor, PyCharm, Xcode',
+              'What it does: Code editing, debugging, file management',
+              'What it is NOT: AI, cloud service, or deployment platform',
+              'Key point: An IDE is where you work, not what does the work'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'AI vs AI Platform vs AI Tool'
+          },
+          {
+            type: 'list',
+            items: [
+              'AI: The general technology (machine learning, language models)',
+              'AI Tool: Specific implementation you interact with (Claude.ai, ChatGPT, Gemini) - chat interface, answers questions',
+              'AI Platform: Infrastructure to build AI apps (Anthropic API, OpenAI API) - programmatic access to models',
+              'AI Building Platform: Tools to create AI apps without coding (Relevance AI, n8n, Lindy)'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'The Confusion: Claude Code vs Cursor vs Claude.ai'
+          },
+          {
+            type: 'comparison',
+            title: 'Understanding the Differences',
+            headers: ['Tool', 'What It Is', 'Use For'],
+            rows: [
+              ['Claude.ai', 'Chat interface', 'Questions, explanations, drafting'],
+              ['Claude Code', 'Terminal tool', 'Building complete applications'],
+              ['Cursor', 'IDE with Claude', 'Writing code with AI assistance']
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'The Relationship',
+            text: 'Claude = The AI brain. Claude.ai = Chat interface to that brain. Claude Code = File-creating interface to that brain. Cursor = Code editor with that brain assisting.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'SDK, API, CLI, GUI Explained'
+          },
+          {
+            type: 'list',
+            items: [
+              'API (Application Programming Interface): How software talks to other software. You send request → Get response',
+              'SDK (Software Development Kit): Package of tools to use an API easily. Pre-written code so you don\'t build from scratch',
+              'CLI (Command Line Interface): Software you use via Terminal commands. Type commands → Get results',
+              'GUI (Graphical User Interface): Visual interface with buttons and windows. Click → See results'
+            ]
+          },
+          {
+            type: 'comparison',
+            title: 'Tool Categories Summary',
+            headers: ['Tool', 'What It Is', 'Category'],
+            rows: [
+              ['VS Code', 'Code editor', 'IDE'],
+              ['Cursor', 'Code editor with AI', 'IDE + AI'],
+              ['Claude.ai', 'AI chat interface', 'AI Tool (GUI)'],
+              ['Claude Code', 'AI file creator', 'AI Tool (CLI)'],
+              ['Claude API', 'Programmatic AI access', 'AI Platform'],
+              ['n8n', 'Workflow builder', 'Automation Platform'],
+              ['Relevance AI', 'Agent builder', 'AI Building Platform']
+            ]
+          }
+        ]
+      },
+      {
+        id: 'section-4-12',
+        title: 'The Complete Platform Landscape',
+        estimatedTime: '15 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Let\'s map the entire ecosystem of tools you\'ll hear about.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Category 1: AI Chat Interfaces (Talk to AI)'
+          },
+          {
+            type: 'list',
+            items: [
+              'Claude.ai - Best for: Long reasoning, complex instructions. Use when: Learning, explanations, drafting',
+              'ChatGPT - Best for: General tasks, quick answers. Use when: Broad knowledge needed',
+              'Gemini - Best for: Multimodal tasks (images, video). Use when: Need to process media',
+              'All three: Just chat - don\'t build files, don\'t automate, don\'t deploy'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Category 2: AI-Powered Development (Build Apps)'
+          },
+          {
+            type: 'list',
+            items: [
+              'Claude Code - Terminal tool, writes files. Best for: Rapid prototyping, generating complete projects',
+              'Cursor - IDE with AI. Best for: Iterative development, refining existing code',
+              'Comparison: Claude Code = fastest initial build. Cursor = best for ongoing work'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Category 3: No-Code Automation'
+          },
+          {
+            type: 'list',
+            items: [
+              'n8n - Visual workflow builder. Best for: Connecting services, agentic workflows. Strength: See every step visually',
+              'Zapier - Simpler automation. Best for: Basic 2-5 step automations, non-technical teams',
+              'Make (Integromat) - Middle ground between Zapier and n8n'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Category 4: AI Agent Platforms'
+          },
+          {
+            type: 'list',
+            items: [
+              'Relevance AI - No-code agent builder. Best for: Research agents, data processing',
+              'Lindy - Business-focused agents. Best for: Sales, support, scheduling agents',
+              'Comparison: Lindy = most user-friendly. Relevance AI = most flexible'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'The Decision Matrix'
+          },
+          {
+            type: 'list',
+            items: [
+              '"Build a website/app" → Claude Code (prototype) → Cursor (refine) → Vercel (deploy)',
+              '"Connect tools and automate" → n8n (technical) OR Zapier (non-technical)',
+              '"AI decisions in workflows" → n8n + Claude API (agentic workflow)',
+              '"Autonomous agent for goals" → Relevance AI (no-code) OR custom build',
+              '"Test AI capabilities" → Google AI Studio (experimentation)'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'The Efficient Multi-Tool Workflow',
+            text: '1. Prototype in Claude Code (minutes). 2. Refine in Cursor (hours). 3. Deploy to Vercel (minutes). 4. Automate with n8n (hours). 5. Scale with agent platforms when needed. Don\'t try to do everything in one tool - use each for its strengths.'
+          }
+        ]
+      },
+      {
+        id: 'section-4-13',
+        title: 'Claude Cowork - AI-Powered Task Management',
+        estimatedTime: '10 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Cowork is a feature in the Claude Desktop app that lets Claude autonomously manage tasks on your computer - reading files, running code, organizing projects, and executing complex workflows.'
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'Think of It As',
+            text: 'Claude with hands, not just a brain.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Cowork vs Claude Code'
+          },
+          {
+            type: 'comparison',
+            title: 'Understanding the Difference',
+            headers: ['Claude Code', 'Claude Cowork'],
+            rows: [
+              ['You describe what to build', 'You describe what needs doing'],
+              ['Claude writes all files', 'Claude does the work'],
+              ['You run the code yourself', 'Claude executes tasks autonomously'],
+              ['Focused on creating projects', 'Focused on ongoing task management']
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'What Cowork Can Do'
+          },
+          {
+            type: 'list',
+            items: [
+              'File management: "Organize my Downloads folder by file type"',
+              'Code execution: "Run this script and fix any errors that come up"',
+              'Data processing: "Convert all Word docs in this folder to PDFs"',
+              'Project coordination: "Review my codebase and create a TODO list of bugs"'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Cowork vs Building an Agent'
+          },
+          {
+            type: 'list',
+            items: [
+              'Cowork: Assistant for YOUR computer, local task execution, you assign tasks',
+              'Agent (Relevance AI): Autonomous in the cloud, ongoing goals, self-orchestrating',
+              'Example Cowork: "Clean up my Downloads, then organize project files"',
+              'Example Agent: "Monitor competitor pricing and update our pricing weekly"'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'When to Use Cowork'
+          },
+          {
+            type: 'list',
+            items: [
+              '✅ Managing files on your computer',
+              '✅ Running scripts and seeing results',
+              '✅ Organizing projects',
+              '✅ Local data processing',
+              '❌ Continuous monitoring (not always running)',
+              '❌ Cloud-based automation (Cowork is local)',
+              '❌ Multi-user coordination (just for you)'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'Combined Workflow',
+            text: 'Step 1: Use Claude Code to build your project. Step 2: Use Cowork for ongoing management ("Test this project and fix bugs"). Step 3: Use Cursor for manual refinement. Each tool has its place.'
           }
         ]
       }
@@ -3254,6 +3605,441 @@ export const courseContent = [
             variant: 'tip',
             title: 'Key Principle',
             text: 'Don\'t build complex networks on day 1. Evolve into them as needs grow. Start with single agents, graduate to simple networks, add complexity only when justified by real requirements.'
+          }
+        ]
+      },
+      {
+        id: 'section-13-8',
+        title: 'Visualizing and Monitoring Agent Networks',
+        estimatedTime: '15 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'When you build agent networks, visibility is critical. You need to know which agents are running, what decisions they\'re making, where errors occur, how long things take, and how much it costs.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'n8n (Best Visibility)'
+          },
+          {
+            type: 'list',
+            items: [
+              'Visual workflow - Every node represented graphically',
+              'Execution logs - Click any workflow run, see every step',
+              'Data inspector - View data passing between nodes',
+              'Error highlighting - Failed nodes show in red with details',
+              'Manual testing - Run workflows step-by-step',
+              'Best for: Agentic workflows, debugging, learning'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Relevance AI (Agent Dashboard)'
+          },
+          {
+            type: 'list',
+            items: [
+              'Agent status board - All agents listed with status',
+              'Task queue - What each agent is working on',
+              'Execution history - Past runs with outcomes',
+              'Cost tracking - API spend per agent',
+              'Best for: Agent networks, ongoing monitoring, cost management'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Claude Code (No Built-in Monitoring)'
+          },
+          {
+            type: 'paragraph',
+            text: 'Claude Code shows terminal output as it works, but no execution logs, error tracking, or cost tracking. It\'s for building, not monitoring. To monitor Claude Code outputs: build with Claude Code, deploy to platform with monitoring (Vercel has logs), or add logging to generated code.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'What to Monitor'
+          },
+          {
+            type: 'list',
+            items: [
+              'Critical alerts: Agent fails 3+ times, cost exceeds budget, output quality below threshold',
+              'Warning alerts: Success rate drops below 90%, execution time trending up',
+              'Track daily: Agent status, execution time, cost per agent, success rate'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Debugging Hierarchy'
+          },
+          {
+            type: 'numbered-list',
+            items: [
+              'Level 1: Check dashboard - Is agent running? What\'s the error? When did it last succeed?',
+              'Level 2: Review logs - What was input data? What decision did AI make?',
+              'Level 3: Test individual components - Run just the failed node',
+              'Level 4: Examine data flow - Is data in right format? Are API responses what we expect?'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'Recommendation',
+            text: 'For learning/prototyping: Use n8n (best visibility). For production: Platform native monitoring + custom logging + alerts. Don\'t build complex systems without visibility - you\'ll regret it when debugging.'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'module-14',
+    title: 'UNDERSTANDING AI ECONOMICS',
+    description: 'Learn about tokens, costs, context windows, API limits, and when to self-host vs use cloud services.',
+    sections: [
+      {
+        id: 'section-14-1',
+        title: 'Tokens Explained - The Currency of AI',
+        estimatedTime: '10 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'A token is the unit of text that AI models process. Think of tokens as "chunks" of text. When you send text to an AI, it\'s broken into tokens, processed, and you\'re charged per token.'
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'Token Rules of Thumb',
+            text: '1 token ≈ 4 characters. 1 token ≈ 0.75 words. 100 tokens ≈ 75 words. 1,000 tokens ≈ 750 words.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Token Variations'
+          },
+          {
+            type: 'list',
+            items: [
+              'Common words = 1 token: "the", "and", "hello"',
+              'Uncommon words = Multiple tokens: "anthropomorphization" = 4 tokens',
+              'Numbers and special characters: "123456" = 2-3 tokens, "user@email.com" = 4-5 tokens'
+            ]
+          },
+          {
+            type: 'paragraph',
+            text: 'AI doesn\'t understand "words" - it understands patterns. Tokenization breaks text into meaningful chunks the AI recognizes.'
+          }
+        ]
+      },
+      {
+        id: 'section-14-2',
+        title: 'LLM Costs - How Pricing Actually Works',
+        estimatedTime: '12 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'AI APIs charge per token, in two categories: Input tokens (what you send) and Output tokens (what AI generates). Output usually costs more.'
+          },
+          {
+            type: 'comparison',
+            title: 'Claude Model Pricing (per million tokens)',
+            headers: ['Model', 'Input Cost', 'Output Cost', 'Best For'],
+            rows: [
+              ['Haiku', '$0.25', '$1.25', 'Simple tasks, high volume'],
+              ['Sonnet', '$3', '$15', 'Balanced performance'],
+              ['Opus', '$15', '$75', 'Complex reasoning']
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'example',
+            title: 'Real Cost Calculation',
+            text: 'Customer support categorization: 10,000 tickets/day, 100 tokens input + 20 output each. Using GPT-4: $42/day ($1,260/month). Using Claude Haiku: $0.50/day ($15/month). 84x cheaper!'
+          },
+          {
+            type: 'paragraph',
+            text: 'The strategy: Use cheap models where possible, expensive models only where quality matters critically.'
+          }
+        ]
+      },
+      {
+        id: 'section-14-3',
+        title: 'Context Windows and Token Limits',
+        estimatedTime: '10 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'The context window is the maximum amount of tokens an AI model can process in one conversation. Think of it as the AI\'s "working memory".'
+          },
+          {
+            type: 'comparison',
+            title: 'Typical Context Windows',
+            headers: ['Model', 'Context Window', 'Roughly Equals'],
+            rows: [
+              ['GPT-3.5', '16K tokens', '12,000 words'],
+              ['GPT-4 Turbo', '128K tokens', '96,000 words'],
+              ['Claude Opus', '200K tokens', '150,000 words'],
+              ['Gemini 1.5 Pro', '2M tokens', '1.5 million words']
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'What Counts Toward the Limit'
+          },
+          {
+            type: 'list',
+            items: [
+              'System instructions (hidden but using tokens)',
+              'Your entire message',
+              'Any documents/files you include',
+              'Full conversation history',
+              'AI\'s previous responses'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Strategies to Manage Limits'
+          },
+          {
+            type: 'list',
+            items: [
+              'Summarize long conversations periodically',
+              'Use appropriate models for the task size',
+              'Break up large tasks (process 2 documents at a time)',
+              'Remove unnecessary context (each API call can be independent)'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'section-14-4',
+        title: 'API Limits vs Rate Limits',
+        estimatedTime: '10 min',
+        content: [
+          {
+            type: 'heading',
+            level: 3,
+            text: 'API Limits (How Much You Can Use Total)'
+          },
+          {
+            type: 'list',
+            items: [
+              'Free tiers: Limited requests per day, restricted usage',
+              'Paid tiers: Pay per token, no cap (but rate limited)',
+              'You can spend as much as you want (billing limit sets max)'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Rate Limits (How Fast You Can Request)'
+          },
+          {
+            type: 'list',
+            items: [
+              'Maximum requests per minute/hour to prevent abuse',
+              'Example: Free tier 3 requests/minute, Paid tier 60+ requests/minute',
+              'When hit: Error 429 "Too Many Requests"'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'Handling Rate Limits',
+            text: 'Bad: Send all requests at once (will fail). Good: Add delays between calls. Better: Use queue with retry logic and concurrency limits.'
+          }
+        ]
+      },
+      {
+        id: 'section-14-5',
+        title: 'Where Costs Actually Come From',
+        estimatedTime: '10 min',
+        content: [
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Scenario 1: Chat Interface (Low Cost)'
+          },
+          {
+            type: 'paragraph',
+            text: 'Using Claude.ai web interface: $0 (free) or $20/month (Pro). Anthropic pays API costs. Your cost: Just subscription, no per-use cost.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Scenario 2: Building App with AI (Real Costs)'
+          },
+          {
+            type: 'paragraph',
+            text: 'Customer support app with Claude API: 50,000 tickets/month × 120 tokens each = Using Claude Haiku = ~$2.50/month. Cheap but scales linearly with usage.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Scenario 3: Agent Network (Highest Costs)'
+          },
+          {
+            type: 'paragraph',
+            text: 'Competitive intelligence agents running daily with multiple API calls. Research + Analysis + Report = ~17,000 tokens/day. Using Claude Opus: ~$16.65/month. Not terrible, but adds up with multiple agents.'
+          },
+          {
+            type: 'highlight',
+            variant: 'warning',
+            title: 'Where Costs Explode',
+            text: 'High-volume operations: Processing 1M documents/month, real-time AI for thousands of users, running dozens of agents continuously. Model choice matters at scale!'
+          }
+        ]
+      },
+      {
+        id: 'section-14-6',
+        title: 'Open Source vs Closed Source LLMs',
+        estimatedTime: '12 min',
+        content: [
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Closed Source (Claude, GPT-4, Gemini)'
+          },
+          {
+            type: 'list',
+            items: [
+              '✅ State-of-the-art performance',
+              '✅ Maintained by company, no infrastructure needed',
+              '✅ Reliable uptime, safety measures built-in',
+              '❌ Ongoing API costs, dependent on company',
+              '❌ Rate limits, privacy concerns (data sent externally)'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Open Source (Llama 3, Mistral, Phi-3)'
+          },
+          {
+            type: 'list',
+            items: [
+              '✅ No ongoing API costs after setup',
+              '✅ Full control and privacy, can customize',
+              '✅ No rate limits (only limited by hardware)',
+              '❌ Generally less capable than closed source',
+              '❌ You manage infrastructure, setup complexity'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'concept',
+            title: 'When to Use Each',
+            text: 'Closed source: Starting out, need best quality, want reliability. Open source: High volume (API costs add up), privacy critical, have technical team, long-term cost optimization.'
+          },
+          {
+            type: 'paragraph',
+            text: 'Open source isn\'t free - you pay for infrastructure. Running Llama 3 70B: $1,500-3,000/month cloud GPU. May be cheaper than Opus API only at very high scale.'
+          }
+        ]
+      },
+      {
+        id: 'section-14-7',
+        title: 'Self-Hosting - What, When, Why',
+        estimatedTime: '12 min',
+        content: [
+          {
+            type: 'paragraph',
+            text: 'Self-hosting means running software on your own servers instead of using a company\'s cloud service.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Self-Hosting n8n'
+          },
+          {
+            type: 'list',
+            items: [
+              'Managed n8n Cloud: $20-50/month, they handle everything',
+              'Self-Hosted: $5-20/month server, you handle setup/updates/backups',
+              'Why self-host: Cost savings at scale, data privacy, customization'
+            ]
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Self-Hosting LLMs'
+          },
+          {
+            type: 'list',
+            items: [
+              'Why: High usage (100M+ tokens/month), privacy critical, need customization',
+              'Small model (Llama 3 8B): Needs 16GB GPU, ~$500-1000 one-time or $0.50-1/hour cloud',
+              'Medium model (Llama 3 70B): Needs 80GB GPU, ~$2-4/hour cloud',
+              'Can\'t self-host GPT-4/Opus scale - requires massive GPU clusters'
+            ]
+          },
+          {
+            type: 'highlight',
+            variant: 'tip',
+            title: 'Hybrid Approach (Common)',
+            text: 'Use APIs for low-volume complex tasks (GPT-4/Opus). Self-host for high-volume simple tasks (classification, extraction with Llama 3). Best of both worlds.'
+          }
+        ]
+      },
+      {
+        id: 'section-14-8',
+        title: 'Cost Optimization Strategies',
+        estimatedTime: '12 min',
+        content: [
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Strategy 1: Model Tiering'
+          },
+          {
+            type: 'paragraph',
+            text: 'Simple tasks → Cheap models (categorization, extraction). Complex tasks → Expensive models (analysis, writing). Savings: 5-10x by using right model for right task.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Strategy 2: Prompt Optimization'
+          },
+          {
+            type: 'paragraph',
+            text: 'Don\'t include 5,000 words for a yes/no question. Pre-filter with simple code, only use AI for ambiguous cases.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Strategy 3: Caching'
+          },
+          {
+            type: 'paragraph',
+            text: 'Same question = return cached response. 1,000 users asking "What are your hours?" = 1 AI call + 999 cached responses. 999x cheaper!'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Strategy 4: Batch Processing'
+          },
+          {
+            type: 'paragraph',
+            text: 'Instead of 1,000 separate AI calls, batch: "Categorize these 20 items: [list]". 50 calls instead of 1,000 = 20x fewer API requests.'
+          },
+          {
+            type: 'heading',
+            level: 3,
+            text: 'Strategy 5: Fallback Chains'
+          },
+          {
+            type: 'paragraph',
+            text: 'Try cheap model first. If confidence < 80%, use expensive model. Result: 80% handled by cheap model. Huge cost savings while maintaining quality.'
+          },
+          {
+            type: 'highlight',
+            variant: 'warning',
+            title: 'Monitor and Alert',
+            text: 'Log every AI call with cost. Daily summary by task type. Alert if daily cost > budget or specific task spikes. Catch expensive mistakes early.'
           }
         ]
       }

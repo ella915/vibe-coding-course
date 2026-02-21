@@ -458,6 +458,58 @@ export const quizzes = [
         ],
         correctAnswer: 1,
         explanation: 'Chat interfaces are ideal for explaining errors. Copy-paste the error message and your code for a detailed explanation.'
+      },
+      {
+        id: 'q4-11',
+        type: 'multiple-choice',
+        question: 'What\'s the main difference between an IDE and an AI tool?',
+        options: [
+          'They\'re the same thing',
+          'IDE is where you write code; AI tool generates code or answers questions',
+          'IDEs are always better',
+          'AI tools replace IDEs'
+        ],
+        correctAnswer: 1,
+        explanation: 'IDEs are software for writing and managing code. AI tools are intelligence that can generate code, answer questions, or make decisions. You might use AI tools WITHIN an IDE (like Cursor).'
+      },
+      {
+        id: 'q4-12',
+        type: 'multiple-choice',
+        question: 'What can Claude Cowork do that Claude Code cannot?',
+        options: [
+          'Build applications from scratch',
+          'Execute ongoing tasks on your computer autonomously (file management, running scripts)',
+          'Deploy to the internet',
+          'Chat casually about any topic'
+        ],
+        correctAnswer: 1,
+        explanation: 'Cowork can execute tasks and manage your computer\'s files/processes. Claude Code builds projects but you run them yourself.'
+      },
+      {
+        id: 'q4-13',
+        type: 'multiple-choice',
+        question: 'When should you prototype in Claude Code and then use n8n?',
+        options: [
+          'Never, pick one tool only',
+          'When you need fast idea validation (Claude Code) then production monitoring/reliability (n8n)',
+          'Always, for every project',
+          'Only if you have unlimited budget'
+        ],
+        correctAnswer: 1,
+        explanation: 'Claude Code is fastest for prototyping (test idea in hours). n8n provides visibility, monitoring, and reliability for production systems.'
+      },
+      {
+        id: 'q4-14',
+        type: 'multiple-choice',
+        question: 'Which platform provides the best visual monitoring of agent execution?',
+        options: [
+          'Claude Code (no monitoring)',
+          'n8n (visual workflow, execution logs, data inspection)',
+          'Relevance AI (agent dashboard but less granular)',
+          'Cursor (IDE, not agent platform)'
+        ],
+        correctAnswer: 1,
+        explanation: 'n8n shows every step visually, lets you inspect data at each node, and makes debugging straightforward. Essential for complex agent networks.'
       }
     ]
   },
@@ -1315,6 +1367,142 @@ export const quizzes = [
         ],
         correctAnswer: 1,
         explanation: 'Start simple to learn fundamentals, prove value, then gradually add complexity as needs and skills grow.'
+      }
+    ]
+  },
+  {
+    moduleId: 'module-14',
+    passingScore: 70,
+    questions: [
+      {
+        id: 'q14-1',
+        type: 'multiple-choice',
+        question: 'What are tokens in the context of AI models?',
+        options: [
+          'Currency for buying API access',
+          'Small pieces of text (roughly 4 characters or 0.75 words) that models process',
+          'Authentication codes',
+          'File types for AI projects'
+        ],
+        correctAnswer: 1,
+        explanation: 'Tokens are how AI models "see" text. Each token is roughly 4 characters or about 0.75 words. Both input and output are measured in tokens.'
+      },
+      {
+        id: 'q14-2',
+        type: 'multiple-choice',
+        question: 'If Claude Sonnet costs $3/$15 per million tokens (input/output), what would a prompt with 1000 input tokens and 500 output tokens cost?',
+        options: [
+          '$0.0105',
+          '$18.00',
+          '$0.18',
+          'Free'
+        ],
+        correctAnswer: 0,
+        explanation: 'Input: 1000/1M × $3 = $0.003. Output: 500/1M × $15 = $0.0075. Total = $0.0105 (about 1 cent).'
+      },
+      {
+        id: 'q14-3',
+        type: 'multiple-choice',
+        question: 'What is a context window?',
+        options: [
+          'The screen where you see responses',
+          'How much text the model can "see" at once (input + output combined)',
+          'A debugging feature',
+          'The chat interface'
+        ],
+        correctAnswer: 1,
+        explanation: 'Context window is the model\'s memory - how much total text it can process in one conversation, including both your messages and its responses.'
+      },
+      {
+        id: 'q14-4',
+        type: 'multiple-choice',
+        question: 'Why does output cost more than input for most AI models?',
+        options: [
+          'Marketing strategy',
+          'Output is fancier',
+          'Generation is computationally harder than processing input',
+          'It\'s actually cheaper'
+        ],
+        correctAnswer: 2,
+        explanation: 'Generating text requires more computational work than reading it. Output tokens typically cost 3-5x more than input tokens.'
+      },
+      {
+        id: 'q14-5',
+        type: 'multiple-choice',
+        question: 'What\'s the main trade-off between open source and closed source LLMs?',
+        options: [
+          'Open source is always better',
+          'Open source: control/privacy but more complexity; Closed source: easier but less control',
+          'Closed source is always cheaper',
+          'There\'s no difference'
+        ],
+        correctAnswer: 1,
+        explanation: 'Open source gives you control and privacy (run on your hardware) but requires more technical expertise. Closed source is easier but you pay per use.'
+      },
+      {
+        id: 'q14-6',
+        type: 'multiple-choice',
+        question: 'Which is a valid reason to consider self-hosting an LLM?',
+        options: [
+          'It\'s always cheaper',
+          'Privacy requirements, high volume usage, or need for offline operation',
+          'Self-hosting is easier than APIs',
+          'You dislike cloud services'
+        ],
+        correctAnswer: 1,
+        explanation: 'Self-hosting makes sense for: strict privacy needs, volume high enough to offset infrastructure costs, or scenarios requiring offline/air-gapped operation.'
+      },
+      {
+        id: 'q14-7',
+        type: 'multiple-choice',
+        question: 'What is model tiering as a cost optimization strategy?',
+        options: [
+          'Using only the cheapest model',
+          'Using different model sizes for different task complexities',
+          'Ranking models by quality',
+          'Paying for premium tiers'
+        ],
+        correctAnswer: 1,
+        explanation: 'Model tiering means using fast/cheap models (Haiku) for simple tasks and powerful/expensive models (Opus) only for complex tasks.'
+      },
+      {
+        id: 'q14-8',
+        type: 'multiple-choice',
+        question: 'What does API caching help you avoid?',
+        options: [
+          'Security breaches',
+          'Paying for identical requests multiple times',
+          'Slow internet',
+          'Model updates'
+        ],
+        correctAnswer: 1,
+        explanation: 'Caching stores responses so identical (or similar) requests don\'t need to call the API again, saving both time and money.'
+      },
+      {
+        id: 'q14-9',
+        type: 'multiple-choice',
+        question: 'What are rate limits?',
+        options: [
+          'Speed of the model\'s responses',
+          'Maximum requests per time period imposed by the API provider',
+          'Cost limits on your account',
+          'Bandwidth restrictions'
+        ],
+        correctAnswer: 1,
+        explanation: 'Rate limits restrict how many API calls you can make in a given time period. Exceeding them returns 429 errors.'
+      },
+      {
+        id: 'q14-10',
+        type: 'scenario',
+        question: 'You\'re building a chatbot that handles 10,000 conversations daily. What cost strategy makes most sense?',
+        options: [
+          'Use the most expensive model for quality',
+          'Use model tiering: cheap model for simple queries, expensive for complex ones',
+          'Self-host everything immediately',
+          'Avoid AI entirely due to cost'
+        ],
+        correctAnswer: 1,
+        explanation: 'At high volume, model tiering dramatically reduces costs. Most queries are simple and don\'t need expensive models.'
       }
     ]
   },
